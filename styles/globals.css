@@ -40,43 +40,33 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+*::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+  background-color: #fff!important;
+}
+  
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px!important;
+  background-color: #A1A1A1!important;
+}
+  
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #717171!important;
+}
+  
+*::-webkit-scrollbar-track {
+  background-color: #E7E7E7!important;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  overflow-y: auto;
 }
 
 html,
@@ -86,13 +76,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  background-color: #FFF0D8;
+  color: #225A18;
+  overflow-y: hidden;
+}
+main {
+  margin-top: 100px;
 }
 
 a {
@@ -104,4 +94,36 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 135px;
+  margin: 0 auto;
+  @media (max-width: 1899px) {
+    padding: 0 115px;
+    max-width: 100%;
+  }
+  @media (max-width: 1549px) {
+    padding: 0 95px;
+  }
+  @media (max-width: 1399px) {
+    padding: 0 75px;
+  }
+  @media (max-width: 1249px) {
+    padding: 0 55px;
+  }
+  @media (max-width: 999px) {
+    padding: 0 44px;
+  }
+  @media (max-width: 759px) {
+    padding: 0 20px;
+  }
+}
+
+#__next {
+  display: contents;
 }
