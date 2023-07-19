@@ -83,7 +83,9 @@ body {
 }
 main {
   margin-top: 100px;
-  @media (max-width: 999px) {
+}
+@media (max-width: 999px) {
+  main {
     margin-top: 80px;
   }
 }
