@@ -4,7 +4,8 @@ import { Montserrat_Alternates, Montserrat } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import classNames from 'classnames';
 import { AiFillFileText } from 'react-icons/ai';
-import Header from '@/uikit/Header/Header';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 const pageTitleFont = Montserrat_Alternates({
   subsets: ['latin'],
@@ -21,7 +22,19 @@ const textFont = Montserrat({
   weight: '500',
 });
 
+export async function getStaticProps({ locale }: {locale: string}) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'home',
+      ])),
+    },
+  };
+}
+
 export default function Home() {
+  const { t } = useTranslation('home');
   return (
     <>
       <Head>
@@ -35,10 +48,11 @@ export default function Home() {
           <div className={styles.left}>
             <div className={styles.leftContent}>
               <h1 className={classNames(styles.title, pageTitleFont.className)}>Transped <span className={styles.postfix}>s.r.o.</span></h1>
-              {/* <p className={classNames(styles.description, pageDescriptionFont.className)} dangerouslySetInnerHTML={{ __html: t('transpedServices') }} /> */}
+              <p className={classNames(styles.description, pageDescriptionFont.className)} dangerouslySetInnerHTML={{ __html: t('title') }} />
             </div>
           </div>
           <Image className={styles.right} src={'/images/HomeHero.png'} width={956} height={751} alt={''} />
+          <Image className={styles.rightMobile} src={'/images/HomeMobileHero.png'} width={397} height={755} alt={''} />
         </section>
         <section className={styles.holding}>
           <div className={styles.left}>
@@ -46,16 +60,16 @@ export default function Home() {
           </div>
           <div className={styles.right}>
             <h2 className={classNames(styles.title, pageTitleFont.className)}>Grain Alliance</h2>
-            <p className={classNames(styles.description, textFont.className)}>
-          Наша група компаній називається <a className={styles.pageLink} style={{ display: 'inline' }} href="http://www.grainalliance.com/" target="_blank" rel="noreferer">BZK Grain Alliance AB (Швеція)</a>, яка є 100% власником словацької торгово-перевалочної дочірньої компанії на ринку ЄС - Transped s.r.o.<br/><br/>
-          Ми обробляємо близько 60 тис. га землі в Україні, розташованих  в Київській, Черкаській, Полтавській та Чернігівській областях. Основними культурами у виробництві є кукурудза та соя, а додатковими культурами - насіння соняшнику та озима пшениця, тощо. Вся продукція не містить ГМО. Наші активи в Україні також включають загальні потужностідля зберігання близько 350 тис. тонн у 6 елеваторах (Пирятин, Яготин, Ніжин, Березань, Баришівка, Ярмолинці). Кожен елеватор обладнаний власною лабораторією. Вся продукція тестується в наших лабораторіях, а вибіркові партії перевіряються Державними фітосанітарними лабораторіями. Для забезпечення поставок ми також володіємо власним парком залізничних вагонів в Україні - загальною кількістю більше 230 вагонів для української колії.<br/><br/>
-          Transped s.r.o. - перевантажувальний і торговий підрозділ в ЄС. Ми перевозимо та продаємо власне українське зерно в Європу, переважно в Італію, Німеччину, Австрію та інші країни.
-            </p>
+            <div className={classNames(styles.description, textFont.className)}>
+              <div className={styles.aboutHolding}><div>Наша група компаній називається <a className={styles.pageLink} style={{ display: 'inline' }} href="http://www.grainalliance.com/" target="_blank" rel="noreferer">BZK Grain Alliance AB (Швеція)</a>, яка є 100% власником словацької торгово-перевалочної дочірньої компанії на ринку ЄС - Transped s.r.o.</div><Image className={styles.holdingLogoMobile} src={'/images/GrainAlliance.png'} width={82} height={134} alt={''} /></div><br/><br/>
+              Ми обробляємо близько 60 тис. га землі в Україні, розташованих  в Київській, Черкаській, Полтавській та Чернігівській областях. Основними культурами у виробництві є кукурудза та соя, а додатковими культурами - насіння соняшнику та озима пшениця, тощо. Вся продукція не містить ГМО. Наші активи в Україні також включають загальні потужностідля зберігання близько 350 тис. тонн у 6 елеваторах (Пирятин, Яготин, Ніжин, Березань, Баришівка, Ярмолинці). Кожен елеватор обладнаний власною лабораторією. Вся продукція тестується в наших лабораторіях, а вибіркові партії перевіряються Державними фітосанітарними лабораторіями. Для забезпечення поставок ми також володіємо власним парком залізничних вагонів в Україні - загальною кількістю більше 230 вагонів для української колії.<br/><br/>
+              Transped s.r.o. - перевантажувальний і торговий підрозділ в ЄС. Ми перевозимо та продаємо власне українське зерно в Європу, переважно в Італію, Німеччину, Австрію та інші країни.
+            </div>
           </div>
         </section>
         <section className={styles.logystics}>
-          <h2 className={classNames(styles.title, pageTitleFont.className)}>Логістика Transped s.r.o.</h2>
-          <iframe width="1120" height="630" src="https://www.youtube.com/embed/A36OtGtN5D8" title="Логістика Transped s.r.o." frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          <h2 className={classNames(styles.title, pageTitleFont.className)}>Логістика Transped&nbsp;s.r.o.</h2>
+          <iframe className={styles.video} width="1120" height="630" src="https://www.youtube.com/embed/A36OtGtN5D8" title="Логістика Transped s.r.o." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </section>
         <section className={styles.aboutUs}>
           <h2 className={classNames(styles.title, pageTitleFont.className)}>Про нас</h2>
@@ -65,7 +79,7 @@ export default function Home() {
           Презентація нашої нової компанії Transped s.r.o. відбулася у вересні 2022 року в Братиславі за участюМіністрів і Послів Словаччини, Швеції та України.
             </div>
             <div className={styles.right}>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/perFwzk3ijo" title="the unique experience of the Baryshivska grain company Grain Alliance was discussed in Bratislava" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className={styles.video} width="560" height="315" src="https://www.youtube-nocookie.com/embed/perFwzk3ijo" title="the unique experience of the Baryshivska grain company Grain Alliance was discussed in Bratislava" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
           </div>
           <div className={classNames(styles.conclusion, textFont.className)}>

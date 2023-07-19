@@ -7,18 +7,30 @@
   box-shadow: 0 10px 30px hsla(0,0%,7%,.1);
   z-index: 100;
 
+  @media (max-width: 999px) {
+    height: 80px;
+  }
+
   .headerContent {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 999px) {
+      height: 80px;
+    }
   }
   
   .logoContainer {
     position: relative;
     height: 100%;
     width: 108px;
+    @media (max-width: 999px) {
+      width: 80px;
+    }
     .logo {
+      width: 100%;
+      height: auto;
       position: absolute;
       top: 0;
       box-shadow: 0 10px 30px hsla(0,0%,7%,.1);
@@ -71,14 +83,13 @@
     
     .burgerMenu {
       background: transparent;
-      border: 2px solid #fff;
       width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      border-radius: 50%;
+      border: none;
       cursor: pointer;
       @media (min-width: 1150px) {
         display: none;
@@ -134,21 +145,13 @@
       }
     
     a, &>span {
-      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 130%;
-      /* identical to box height, or 21px */
-
-
-      /* Grayscale/Main */
 
       color: #131313;
       transition-duration: .4s;
-      // @media (max-width: 1249px) {
-      //   font-size: 11px;
-      // }
       @media (max-width: 999px) {
         font-size: 14px;
       }
@@ -184,19 +187,14 @@
     visibility: hidden;
     transition-duration: .4s;
     .links {
-      margin-top: 35px;
+      margin-top: 40px;
       display: flex;
       flex-direction: column;
       padding: 10px;
-      background: #FFFFFF;
-      /* Drop Shadow */
-
+      background: #023f2581;
       box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
-      @media (max-width: 1249px) {
-        margin-top: 35px;
-      }
       @media (max-width: 999px) {
-        margin-top: 21px;
+        margin-top: 30px;
       }
     }
     .link {
@@ -206,8 +204,11 @@
       font-size: 16px;
       line-height: 130%;
       white-space: nowrap;
-      color: #131313;
+      color: #ffffff;
       transition-duration: .4s;
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
     .cont {
       background-color: #FFFFFF;

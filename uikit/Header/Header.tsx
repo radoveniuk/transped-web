@@ -5,10 +5,12 @@ import classNames from 'classnames';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoMenuSharp } from 'react-icons/io5';
 // import useTranslation from 'next-translate/useTranslation';
+import { i18n } from '../../next-i18next.config';
 
 import styles from './Header.module.scss';
+import { useTranslation } from 'next-i18next';
 
-const LANGS = ['uk', 'sk', 'en', 'de', 'it', 'hu', 'pl'];
+const LANGS = i18n.locales;
 
 const font = Montserrat_Alternates({
   subsets: ['cyrillic', 'latin'],
@@ -16,7 +18,17 @@ const font = Montserrat_Alternates({
 });
 
 const Header = () => {
-  // const { lang } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const getFlag = (lang: string) => {
+    if (lang === 'en') {
+      return 'https://flagcdn.com/w20/gb-eng.png';
+    }
+    if (lang === 'uk') {
+      return 'https://flagcdn.com/w20/ua.png';
+    }
+    return `https://flagcdn.com/w20/${lang}.png`;
+  };
 
   return (
     <header className={classNames(font.className, styles.header)}>
@@ -35,15 +47,25 @@ const Header = () => {
           </nav>
           <div className={styles.rightActions}>
             <div className={styles.link}>
-              <div className={styles.top}>UK<IoIosArrowDown size={16} /></div>
+              <div className={styles.top}>{i18n.language}<IoIosArrowDown size={16} /></div>
               <div className={styles.bot}>
                 <div className={styles.links}>
-                  {LANGS.filter((l) => l !== 'uk').map((l) => <Link key={l} className={styles.link} href={'/'} locale={l}>{l}</Link>)}
+                  {LANGS.filter((l) => l !== i18n.language).map((l) => (
+                    <Link key={l} className={styles.link} href={'/'} locale={l}>
+                      <Image
+                        src={getFlag(l)}
+                        width="20"
+                        height="14"
+                        alt={l}
+                      />
+                      {l}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
             <button className={styles.burgerMenu}>
-              <IoMenuSharp size={20} />
+              <IoMenuSharp size={30} />
             </button>
           </div>
         </div>

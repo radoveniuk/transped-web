@@ -1,11 +1,12 @@
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 
 import Footer from '@/uikit/Footer';
 import Header from '@/uikit/Header';
 
 import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header/>
@@ -14,3 +15,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(App);
