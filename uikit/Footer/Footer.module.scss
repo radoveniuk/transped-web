@@ -11,9 +11,11 @@
     flex-direction: column;
     padding-right: 0;
     font-size: 16px;
+    align-items: center;
     img {
       height: 80px;
       width: auto;
+      margin-right: auto;
     }
   }
   
@@ -21,10 +23,11 @@
     display: flex;
     gap: 50px;
     @media (max-width: 600px) {
-      gap: 20px;
-      // justify-content: space-between;
-      // margin-right: 40px;
-      width: 100%;
+      justify-content: space-between;
+      &:first-child {
+        width: 100%;
+        gap: 0;
+      }
     }
   }
 
@@ -40,6 +43,7 @@
 
     @media (max-width: 600px) {
       row-gap: 0;
+      margin: 0 auto;
     }
 
     a {
