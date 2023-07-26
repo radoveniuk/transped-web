@@ -9,6 +9,7 @@ import { i18n } from '../../next-i18next.config';
 
 import styles from './Header.module.scss';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const LANGS = i18n.locales;
 
@@ -19,6 +20,8 @@ const font = Montserrat_Alternates({
 
 const Header = () => {
   const { i18n } = useTranslation();
+
+  const router = useRouter();
 
   const getFlag = (lang: string) => {
     if (lang === 'en') {
@@ -37,12 +40,12 @@ const Header = () => {
           <Link href="/"><Image className={styles.logo} src="/images/Logo.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
         </div>
         <nav className={styles.nav}>
-          <Link href="/">Головна</Link>
-          <Link href="/products">Продукти</Link>
-          <Link href="/investors">Звʼязок з інвесторами</Link>
-          <Link href="/logystics">Логістика</Link>
-          <Link href="/quality">Якість</Link>
-          <Link href="/contacts">Контакти</Link>
+          <Link href="/" className={router.asPath === '/' ? styles.active : ''}>Головна</Link>
+          <Link href="/products" className={router.asPath === '/products' ? styles.active : ''}>Продукти</Link>
+          <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>Звʼязок з інвесторами</Link>
+          <Link href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>Логістика</Link>
+          <Link href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>Якість</Link>
+          <Link href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>Контакти</Link>
         </nav>
         <div className={styles.rightActions}>
           <div className={styles.link}>

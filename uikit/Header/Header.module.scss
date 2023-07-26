@@ -72,6 +72,14 @@
       transform: scaleX(1);
       transform-origin: bottom left;
     }
+    
+    a.active {
+      color: #FFF8DF;
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
 
     @media (max-width: 1150px) {
       display: none;
