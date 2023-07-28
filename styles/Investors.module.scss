@@ -1,0 +1,123 @@
+$primaryText: #225A18;
+$primaryTextLight: #7D9843;
+
+.hero {
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+  grid-gap: 30px;
+  align-items: center;
+
+  @media (max-width: 999px) {
+    display: block;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryText;
+
+    @media (max-width: 999px) {
+      position: absolute;
+      background-color: rgba(255, 248, 223, 0.87);
+      width: 100vw;
+      margin-top: calc(50vh - 200px);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    .leftContent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .title {
+        font-size: 60px;
+        max-width: min-content;
+      }
+    
+      @media (max-width: 1399px) {
+        .title {
+          font-size: 50px;
+        }
+      }
+      
+      @media (max-width: 999px) {
+        .title {
+          font-size: 40px;
+        }
+      }
+
+      .docs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        .docsTitle {
+          font-size: 30px;
+          margin-top: 20px;
+          color: $primaryTextLight;
+        }
+        
+        .docsList {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          list-style: none;
+          .docLink {
+            & {
+              display: flex;
+              gap: 10px;
+              cursor: pointer;
+              position: relative;
+              max-width: min-content;
+              white-space: nowrap;
+              color: $primaryText;
+              &:hover {
+                color: $primaryTextLight;
+              }
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 3px;
+              bottom: 0;
+              top: 25px;
+              left: 0;
+              background-color: $primaryTextLight;
+              transform-origin: bottom right;
+              transition: transform 0.25s ease-out;
+            }
+            
+            &:hover::after {
+              @media (min-width: 999px) {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  
+  .right {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    @media (max-width: 999px) {
+      max-height: calc(100vh - 80px);
+      height: calc(100vh - 80px);
+      width: auto;
+    }
+    @media (max-width: 480px) {
+      max-height: calc(100vh - 80px);
+      height: calc(100vh - 80px);
+      width: auto;
+    }
+  }
+}
+

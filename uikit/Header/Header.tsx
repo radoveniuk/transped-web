@@ -41,8 +41,8 @@ const Header = () => {
         </div>
         <nav className={styles.nav}>
           <Link href="/" className={router.asPath === '/' ? styles.active : ''}>Головна</Link>
+          <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>Інвесторам</Link>
           <Link href="/products" className={router.asPath === '/products' ? styles.active : ''}>Продукти</Link>
-          <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>Звʼязок з інвесторами</Link>
           <Link href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>Логістика</Link>
           <Link href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>Якість</Link>
           <Link href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>Контакти</Link>
