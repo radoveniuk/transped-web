@@ -28,7 +28,7 @@
     height: 100%;
     width: 108px;
     @media (max-width: 999px) {
-      width: 80px;
+      width: 55px;
     }
     .logo {
       width: 100%;
@@ -309,3 +309,49 @@
     }
   }
 }
+
+
+.mobMenu {
+  @media (min-width: 999px) {
+    display: none;
+  }
+  position: fixed;
+  top: 79px;
+  z-index: 1;
+  // background: rgba(2, 63, 37, 0.932);
+  background: linear-gradient(180deg, rgba(125,152,67,1) 0%, rgba(34,90,24,1) 100%);
+  border-top: 1px solid #fff;
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition-duration: .4s;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    @media (min-width: 999px) {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    a {
+      display: flex;
+      color: #FFF8DF;
+      justify-content: center;
+      padding: 20px;
+      font-size: 25px;
+    }
+  }
+}
+

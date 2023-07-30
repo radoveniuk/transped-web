@@ -10,8 +10,8 @@ const buttonFont = Montserrat_Alternates({
 
 type ButtonVariant = 'contained' | 'outlined';
 
-export default function Button({ variant = 'contained', ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: ButtonVariant }) {
+export default function Button({ variant = 'contained', className, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: ButtonVariant }) {
   return (
-    <button className={`${styles.button} ${buttonFont.className} ${styles[variant]}`} type="button" {...props} />
+    <button className={`${styles.button} ${buttonFont.className} ${styles[variant]} ${className}`} type="button" {...props} />
   );
 }

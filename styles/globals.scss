@@ -132,3 +132,19 @@ a {
 #__next {
   display: contents;
 }
+
+@for $i from 1 through 10 {
+  $margin: 10px * $i;
+  .mt-#{$margin} { 
+    margin-top: $margin;
+  }
+  .mb-#{$margin} { 
+    margin-bottom: $margin;
+  }
+  .ml-#{$margin} { 
+    margin-left: $margin;
+  }
+  .mr-#{$margin} { 
+    margin-right: $margin;
+  }
+}
