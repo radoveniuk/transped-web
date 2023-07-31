@@ -15,10 +15,9 @@ $primaryTextLight: #7D9843;
 
     @media (max-width: 999px) {
       position: absolute;
-      background-color: rgba(255, 248, 223, 0.87);
       width: 100vw;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      height: 100vh;
+      top: 0;
     }
     
     .leftContent {
@@ -39,7 +38,9 @@ $primaryTextLight: #7D9843;
       }
       
       @media (max-width: 999px) {
-        margin: 0 auto;
+        padding: 30px;
+        background-color: rgba(255, 248, 223, 0.87);
+        width: 100vw;
         .title {
           font-size: 40px;
         }

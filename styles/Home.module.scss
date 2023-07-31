@@ -16,11 +16,9 @@
 
     @media (max-width: 999px) {
       position: absolute;
-      background-color: rgba(255, 248, 223, 0.87);
       width: 100vw;
-      // margin-top: calc(50vh - 200px);
-      padding-top: 20px;
-      padding-bottom: 20px;
+      height: 100vh;
+      top: 0;
     }
     
     .leftContent {
@@ -52,6 +50,9 @@
       }
       
       @media (max-width: 999px) {
+        padding: 40px;
+        background-color: rgba(255, 248, 223, 0.87);
+        width: 100vw;
         .title {
           font-size: 40px;
           .postfix {

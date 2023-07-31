@@ -46,12 +46,14 @@ export default function Investors () {
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
           <h2 className={styles.title}>Співпраця</h2>
-          <p className={styles.container}>
-          Нашим пріорітетом є чітке і відкрите спілкування з акціонерами, інвесторами, банками та аналітиками. Ми спрямовані на забезпечення надання їм та нашим клієнтам актуальної та достовірної інформації.<br/><br/>
-          Глобальним партнером групи з аудиту є компанія ERNST&YOUNG<br/><br/>
-          Транспед був придбаний групою BZK Grain Alliance AB у 2022 році. З того часу відбуваєтьсящорічний аудит з боку ERNST&YOUNG<br/><br/>
-          ФІНАНСОВУ ЗВІТНІСТЬ Transped s.r.o. можна побачити <a  className={styles.docLink}>тут</a>
-          </p>
+          <div className={styles.container}>
+            <p>
+              Нашим пріорітетом є чітке і відкрите спілкування з акціонерами, інвесторами, банками та аналітиками. Ми спрямовані на забезпечення надання їм та нашим клієнтам актуальної та достовірної інформації.<br/><br/>
+              Глобальним партнером групи з аудиту є компанія ERNST&YOUNG<br/><br/>
+              Транспед був придбаний групою BZK Grain Alliance AB у 2022 році. З того часу відбуваєтьсящорічний аудит з боку ERNST&YOUNG<br/><br/>
+              ФІНАНСОВУ ЗВІТНІСТЬ Transped s.r.o. можна побачити <a  className={styles.docLink}>тут</a>
+            </p>
+          </div>
         </section>
         <section className={styles.contacts}>
           <h2 className={styles.title}>Контактні особи</h2>

@@ -50,6 +50,7 @@
       color: #fff;
       position: relative;
       transition: color .3s;
+      width: min-content;
       &:hover {
         color: #FFF8DF;
       }
