@@ -74,18 +74,18 @@
       height: calc(100vh - 80px);
       width: auto;
     }
-    @media (max-width: 480px) {
-      display: none;
-    }
+    // @media (max-width: 480px) {
+    //   display: none;
+    // }
   }
   .rightMobile {
     display: none;
-    @media (max-width: 480px) {
-      display: block;
-      max-height: calc(100vh - 80px);
-      height: calc(100vh - 80px);
-      width: auto;
-    }
+    // @media (max-width: 480px) {
+    //   display: block;
+    //   max-height: calc(100vh - 80px);
+    //   height: calc(100vh - 80px);
+    //   width: auto;
+    // }
   }
 }
 

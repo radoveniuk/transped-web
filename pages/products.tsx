@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Button from '@/uikit/Button/Button';
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 import ContactCard from '@/uikit/ContactCard/ContactCard';
+import Link from 'next/link';
 
 export async function getStaticProps({ locale }: {locale: string}) {
   return {
@@ -46,7 +47,9 @@ export default function Products () {
           Наші активи в Україні також включають загальні потужності для зберігання близько 350 тис. тонн у 6 елеваторах (Пирятин, Яготин, Ніжин, Березань, Баришівка, Ярмолинці). Кожен елеватор обладнанийвласною лабораторією, яка гарантує високу якість та відповідність зерна вимогам стандартів Українита ЄС.<br/><br/>
           Transped s.r.o., як і виробник зерна, має сертифікати ISCC, GMP+, &quot;Європа соя&quot;, UKSUP (торгівля, збір, зберігання та перевалка), переглянути які можна в розділі цього сайту «ЯКІСТЬ».
           </p>
-          <Button variant="outlined">Сертифікати</Button>
+          <Link href="/quality">
+            <Button variant="outlined">Сертифікати</Button>
+          </Link>
         </section>
         <section className={styles.cultures}>
           <h2 className={styles.title}>Основні культури</h2>

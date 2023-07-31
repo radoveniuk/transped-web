@@ -312,11 +312,11 @@
 
 
 .mobMenu {
-  @media (min-width: 999px) {
+  @media (min-width: 1150px) {
     display: none;
   }
   position: fixed;
-  top: 79px;
+  top: 80px;
   z-index: 1;
   // background: rgba(2, 63, 37, 0.932);
   background: linear-gradient(180deg, rgba(125,152,67,1) 0%, rgba(34,90,24,1) 100%);
@@ -335,7 +335,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-    @media (min-width: 999px) {
+    @media (min-width: 1150px) {
       display: none;
     }
   }

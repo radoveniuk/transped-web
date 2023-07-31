@@ -34,6 +34,7 @@ const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const toggleMobileMenu = () => {
+    document.documentElement.style.overflowY = openMobileMenu ? 'auto' : 'hidden';
     setOpenMobileMenu(prev => !prev);
   };
 
