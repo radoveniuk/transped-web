@@ -31,10 +31,10 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>Звʼязок з інвесторами</h1>
-              <div className={styles.docs}>
-                <div className={styles.docsTitle}>Фінансові звіти</div>
-                <ul className={styles.docsList}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>Звʼязок<br/> з інвесторами</h1>
+              <div className={styles.sideInfo}>
+                <div className={styles.sideInfoTitle}>Фінансові звіти:</div>
+                <ul className={styles.sideInfoList}>
                   <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2023</a></li>
                   <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2022</a></li>
                   <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2021</a></li>
@@ -46,7 +46,7 @@ export default function Investors () {
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
           <h2 className={styles.title}>Співпраця</h2>
-          <p>
+          <p className={styles.container}>
           Нашим пріорітетом є чітке і відкрите спілкування з акціонерами, інвесторами, банками та аналітиками. Ми спрямовані на забезпечення надання їм та нашим клієнтам актуальної та достовірної інформації.<br/><br/>
           Глобальним партнером групи з аудиту є компанія ERNST&YOUNG<br/><br/>
           Транспед був придбаний групою BZK Grain Alliance AB у 2022 році. З того часу відбуваєтьсящорічний аудит з боку ERNST&YOUNG<br/><br/>

@@ -61,7 +61,7 @@
       transform: scaleX(0);
       height: 3px;
       bottom: 0;
-      top: 25px;
+      top: 30px;
       left: 0;
       background-color: #00693C;
       transform-origin: bottom right;
@@ -347,10 +347,34 @@
 
     a {
       display: flex;
-      color: #FFF8DF;
+      color: #fff;
       justify-content: center;
       padding: 20px;
       font-size: 25px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 150px;
+        transform: scaleX(0);
+        height: 3px;
+        bottom: 0;
+        top: 80%;
+        left: auto;
+        right: auto;
+        background-color: #00693C;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      &.active {
+        color: #FFF8DF;
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
     }
   }
 }

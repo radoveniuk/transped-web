@@ -33,7 +33,7 @@ export default function ContactCard(props: Props) {
                 key={locale}
                 src={getFlag(locale)}
                 width="40"
-                height="30"
+                height="25"
                 alt={locale}
                 className={styles.flag}
               />
@@ -42,7 +42,7 @@ export default function ContactCard(props: Props) {
         </div>
       </div>
       <div className={styles.bottom}>
-        <div className={styles.position}>{props.position}</div>
+        <div className={styles.position} dangerouslySetInnerHTML={{ __html: props.position || '' }} />
         <div className={styles.contacts}>
           <a href={`mailto:${props.email}`} className={styles.email}>{props.email}</a>
           <a href={`tel:${props.phone}`} className={styles.phone}>{props.phone}</a>

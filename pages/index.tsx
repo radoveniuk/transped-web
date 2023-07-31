@@ -52,7 +52,7 @@ export default function Home() {
             </div>
           </div>
           <Image className={styles.right} src={'/images/HomeHero.png'} width={956} height={751} alt={''} />
-          <Image className={styles.rightMobile} src={'/images/HomeMobileHero.png'} width={397} height={755} alt={''} />
+          {/* <Image className={styles.right} src={'/images/HomeMobileHero.png'} width={397} height={755} alt={''} /> */}
         </section>
         <section className={styles.holding}>
           <div className={styles.left}>

@@ -133,18 +133,18 @@ a {
   display: contents;
 }
 
-@for $i from 1 through 10 {
-  $margin: 10px * $i;
-  .mt-#{$margin} { 
+@for $i from 1 through 100 {
+  $margin: 1px * $i;
+  .mt-#{$i} { 
     margin-top: $margin;
   }
-  .mb-#{$margin} { 
+  .mb-#{$i} { 
     margin-bottom: $margin;
   }
-  .ml-#{$margin} { 
+  .ml-#{$i} { 
     margin-left: $margin;
   }
-  .mr-#{$margin} { 
+  .mr-#{$i} { 
     margin-right: $margin;
   }
 }
