@@ -31,7 +31,7 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>Звʼязок<br/> з інвесторами</h1>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>Звʼязок з<br/> інвесторами</h1>
               <div className={styles.sideInfo}>
                 <div className={styles.sideInfoTitle}>Фінансові звіти:</div>
                 <ul className={styles.sideInfoList}>
