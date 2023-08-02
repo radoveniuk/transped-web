@@ -1,0 +1,81 @@
+$primaryText: #225A18;
+$primaryTextLight: #7D9843;
+
+.title {
+  font-size: 50px;
+  white-space: nowrap;
+  @media (max-width: 999px) {
+    font-size: 40px;
+    // text-align: center;
+  }
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
+}
+
+.pageTitle {
+  font-size: 60px;
+  max-width: min-content;
+}
+
+@media (max-width: 1399px) {
+  .pageTitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 999px) {
+  .pageTitle {
+    font-size: 40px;
+  }
+}
+
+.contacts {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .cards {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-gap: 50px;
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .addressCard {
+      width: 500px;
+      padding: 0 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #bdd68796 32.81%, #bdd687a8 35.42%, $primaryTextLight 100%);
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+      
+      &.reverse {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #bdd68796 32.81%, #bdd687a8 35.42%, $primaryTextLight 100%);
+        padding: 20px 20px 0 20px;
+      }
+      
+      .map {
+        width: 100%;
+        height: 280px;
+        background: url('/images/MapOffice.png'), lightgray 50% / cover no-repeat;
+      }
+      .title {
+        font-size: 30px;
+      }
+      .contactsData {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}

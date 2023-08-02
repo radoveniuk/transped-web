@@ -88,7 +88,7 @@ export default function Products () {
             />
             <ContactCard
               name="Ярослав Крилов"
-              // position="Фінансовий директор Групи компаній Grain Alliance"
+              position="Трейдер"
               email={'yaroslav.krylov@grainalliance.com'}
               phone=""
               flags={['ua', 'en']}

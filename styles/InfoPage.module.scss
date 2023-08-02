@@ -168,13 +168,11 @@ $primaryTextLight: #7D9843;
   gap: 30px;
 
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    
-    @media (max-width: 999px) {
-      grid-template-columns: 1fr;
-    }
+    display: flex;
+    max-width: 1050px;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
   }
 }
 
@@ -185,12 +183,11 @@ $primaryTextLight: #7D9843;
 
 .title {
   font-size: 50px;
-  white-space: nowrap;
   @media (max-width: 999px) {
     font-size: 40px;
-    // text-align: center;
   }
   @media (max-width: 500px) {
+    text-align: center;
     font-size: 30px;
   }
 }
