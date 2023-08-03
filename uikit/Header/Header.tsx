@@ -79,12 +79,12 @@ const Header = () => {
       </header>
       <div className={`${DEFAULT_TEXT_FONT.className} ${styles.mobMenu} ${openMobileMenu && styles.active}`}>
         <nav className={styles.nav}>
-          <Link onClick={toggleMobileMenu} href="/" className={router.asPath === '/' ? styles.active : ''}>Головна</Link>
-          <Link onClick={toggleMobileMenu} href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>Інвесторам</Link>
-          <Link onClick={toggleMobileMenu} href="/products" className={router.asPath === '/products' ? styles.active : ''}>Продукти</Link>
-          <Link onClick={toggleMobileMenu} href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>Логістика</Link>
-          <Link onClick={toggleMobileMenu} href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>Якість</Link>
-          <Link onClick={toggleMobileMenu} href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>Контакти</Link>
+          <Link onClick={toggleMobileMenu} href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
+          <Link onClick={toggleMobileMenu} href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>{t('2Investors')}</Link>
+          <Link onClick={toggleMobileMenu} href="/products" className={router.asPath === '/products' ? styles.active : ''}>{t('products')}</Link>
+          <Link onClick={toggleMobileMenu} href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>{t('logystics')}</Link>
+          <Link onClick={toggleMobileMenu} href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>{t('quality')}</Link>
+          <Link onClick={toggleMobileMenu} href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>{t('contacts')}</Link>
         </nav>
       </div>
     </>
