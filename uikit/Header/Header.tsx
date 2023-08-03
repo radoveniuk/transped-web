@@ -42,7 +42,7 @@ const Header = () => {
       <header className={classNames(DEFAULT_TEXT_FONT.className, styles.header)}>
         <div className={styles.headerContent}>
           <div className={styles.logoContainer}>
-            <Link href="/"><Image className={styles.logo} src="/images/Logo.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
+            <Link href="/" onClick={() => void setOpenMobileMenu(false)}><Image className={styles.logo} src="/images/Logo.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
           </div>
           <nav className={styles.nav}>
             <Link href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
@@ -71,8 +71,10 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <button className={styles.burgerMenu} onClick={toggleMobileMenu}>
-              <IoMenuSharp size={30} />
+            <button className={`${styles.burgerMenu} ${styles['menu-toggle']} ${openMobileMenu && styles['nav-open']}`} onClick={toggleMobileMenu}>
+              <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--top']}`}></span>
+              <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--middle']}`}></span>
+              <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--bottom']}`}></span>
             </button>
           </div>
         </div>

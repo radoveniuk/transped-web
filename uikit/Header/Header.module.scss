@@ -97,8 +97,8 @@
     }
     .burgerMenu {
       background: transparent;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -379,3 +379,49 @@
   }
 }
 
+.menu-toggle {
+  position: absolute;
+  right: 1.5rem;
+  top: 49%;
+  transform: translate(0, -50%);
+  height: 26px;
+  width: 29px;
+
+  &, &:hover {
+    color: #000;
+  }
+}
+
+.menu-toggle-bar {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+
+  &.menu-toggle-bar--top {
+    transform: translate(0, -8px);
+  }
+  &.menu-toggle-bar--middle {
+  }
+  &.menu-toggle-bar--bottom {
+    transform: translate(0, 8px);
+  }
+
+  .nav-open & {
+    &.menu-toggle-bar--top {
+      transform: translate(0, 0) rotate(45deg);
+    }
+    &.menu-toggle-bar--middle {
+      opacity: 0;
+    }
+    &.menu-toggle-bar--bottom {
+      transform: translate(0, 0) rotate(-45deg);
+    }
+  }
+}
