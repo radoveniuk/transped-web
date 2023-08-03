@@ -1,13 +1,16 @@
 import Image from 'next/image';
 import styles from './ContactCard.module.scss';
+import db from '@/data/team.json';
+import { useTranslation } from 'next-i18next';
 
 type Props = {
   avatarUrl?: string;
-  name: string;
+  name?: string;
   flags?: string[];
   position?: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
+  dbName?: string;
 };
 
 const getFlag = (lang: string) => {
@@ -21,14 +24,24 @@ const getFlag = (lang: string) => {
 };
 
 export default function ContactCard(props: Props) {
+  const { i18n } = useTranslation();
+  let data = props;
+  if (props.dbName) {
+    const finded = db.find((person) => person.nameEN === props.dbName) as any;
+    data = {
+      ...finded,
+      position: finded?.position[i18n.language],
+      name: i18n.language !== 'uk' ? finded.nameEN : finded.nameUK,
+    };
+  }
   return (
     <div className={styles.card}>
       <div className={styles.top}>
-        <Image src={props.avatarUrl || '/images/contacts/anonim.png'} height={160} width={160} alt="Card avatar" className={styles.avatar} />
+        <Image src={data.avatarUrl || '/images/contacts/anonim.png'} height={160} width={160} alt="Card avatar" className={styles.avatar} />
         <div className={styles.info}>
-          <div className={styles.name}>{props.name}</div>
+          <div className={styles.name}>{data.name}</div>
           <div className={styles.flags}>
-            {props.flags?.map((locale) => (
+            {data.flags?.map((locale) => (
               <Image
                 key={locale}
                 src={getFlag(locale)}
@@ -42,10 +55,10 @@ export default function ContactCard(props: Props) {
         </div>
       </div>
       <div className={styles.bottom}>
-        <div className={styles.position} dangerouslySetInnerHTML={{ __html: props.position || '' }} />
+        <div className={styles.position} dangerouslySetInnerHTML={{ __html: data.position || '' }} />
         <div className={styles.contacts}>
-          <a href={`mailto:${props.email}`} className={styles.email}>{props.email}</a>
-          <a href={`tel:${props.phone}`} className={styles.phone}>{props.phone}</a>
+          <a href={`mailto:${data.email}`} className={styles.email}>{data.email}</a>
+          <a href={`tel:${data.phone}`} className={styles.phone}>{data.phone}</a>
         </div>
       </div>
     </div>

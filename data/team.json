@@ -1,0 +1,41 @@
+[
+  {
+    "nameUK": "Євгеній Заглада",
+    "nameEN": "Evgeniy Zaglada",
+    "position": {
+      "uk": "Фінансовий директор Групи компаній Grain Alliance",
+      "sk": "Finančný riaditeľ skupiny Grain Alliance",
+      "en": "Chief Financial Officer of Grain Alliance Group",
+      "hu": "A Grain Alliance Group pénzügyi igazgatója"
+    },
+    "email": "evgeniy.zaglada@grainalliance.com",
+    "avatarUrl": "/images/contacts/Zahlada.png",
+    "flags": ["ua", "en", "ru"]
+  },
+  {
+    "nameUK": "Бартоломей Неметі",
+    "nameEN": "Bartolomej Némethi",
+    "position": {
+      "uk": "Виконавчий директор, менеджер по з/д логістиці",
+      "sk": "Výkonný riaditeľ, manažér železničnej logistiky",
+      "en": "Executive Director, Rail Logistics Manager",
+      "hu": "Ügyvezető igazgató, vasúti logisztikai vezető"
+    },
+    "email": "bartolomej.nemethi@grainalliance.com",
+    "phone": "+421 918 403 112",
+    "avatarUrl": "/images/contacts/BN.png",
+    "flags": ["sk", "en", "ru", "hu"]
+  },
+  {
+    "nameUK": "Ярослав Крилов",
+    "nameEN": "Yaroslav Krylov",
+    "position": {
+      "uk": "Трейдер",
+      "sk": "Obchodník",
+      "en": "Trader",
+      "hu": "Kereskedő"
+    },
+    "email": "yaroslav.krylov@grainalliance.com",
+    "flags": ["ua", "en"]
+  }
+]

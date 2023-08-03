@@ -28,9 +28,9 @@ $primaryTextLight: #7D9843;
       padding: 50px;
       .title {
         font-size: 60px;
-        max-width: min-content;
+        max-width: 500px;
       }
-    
+      
       @media (max-width: 1399px) {
         .title {
           font-size: 50px;
@@ -38,6 +38,7 @@ $primaryTextLight: #7D9843;
       }
       
       @media (max-width: 999px) {
+        max-width: 400px;
         padding: 30px;
         background-color: rgba(255, 248, 223, 0.87);
         width: 100vw;
@@ -118,40 +119,41 @@ $primaryTextLight: #7D9843;
   }
 }
 
+.container {
+  max-width: 1000px;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+
+  @media (max-width: 999px) {
+    flex-direction: column;
+    font-size: 16px;
+  }
+  
+  .images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+    
+    img {
+      max-width: 400px;
+      @media (max-width: 480px) {
+        max-width: 300px;
+      }
+      height: auto;
+    }
+  }
+}
+
 .text {
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  .container {
-    max-width: 1000px;
-    display: flex;
-    gap: 30px;
-    font-size: 20px;
-
-    @media (max-width: 999px) {
-      flex-direction: column;
-      font-size: 16px;
-    }
-    
-    .images {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      @media (max-width: 480px) {
-        flex-direction: column;
-      }
-      
-      img {
-        max-width: 400px;
-        @media (max-width: 480px) {
-          max-width: 300px;
-        }
-        height: auto;
-      }
-    }
-  }
 
   .docLink {
     display: inline;

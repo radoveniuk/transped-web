@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { AiFillFileText } from 'react-icons/ai';
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 import ContactCard from '@/uikit/ContactCard';
+import { Trans, useTranslation } from 'next-i18next';
 
 export async function getStaticProps({ locale }: {locale: string}) {
   return {
@@ -19,6 +20,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 }
 
 export default function Investors () {
+  const { t } = useTranslation('investors');
   return (
     <>
       <Head>
@@ -31,13 +33,18 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`} style={{ whiteSpace: 'nowrap' }}>Звʼязок<br/>з інвесторами</h1>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`} style={{ whiteSpace: 'nowrap' }}>
+                <Trans
+                  t={t}
+                  i18nKey="title"
+                />
+              </h1>
               <div className={styles.sideInfo}>
-                <div className={styles.sideInfoTitle}>Фінансові звіти:</div>
+                <div className={styles.sideInfoTitle}>{t('finacialReports')}</div>
                 <ul className={styles.sideInfoList}>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2023</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2022</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Фіскальний рік 2021</a></li>
+                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2023</a></li>
+                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2022</a></li>
+                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2021</a></li>
                 </ul>
               </div>
             </div>
@@ -45,35 +52,24 @@ export default function Investors () {
           <Image src="/images/InvestorsHero.png" className={styles.right} width={1028} height={751} alt="Image of elevators and flags" />
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
-          <h2 className={styles.title}>Співпраця</h2>
+          <h2 className={styles.title}>{t('cooperationTitle')}</h2>
           <div className={styles.container}>
-            <p>
-              Нашим пріорітетом є чітке і відкрите спілкування з акціонерами, інвесторами, банками та аналітиками. Ми спрямовані на забезпечення надання їм та нашим клієнтам актуальної та достовірної інформації.<br/><br/>
-              Глобальним партнером групи з аудиту є компанія ERNST&YOUNG<br/><br/>
-              Транспед був придбаний групою BZK Grain Alliance AB у 2022 році. З того часу відбувається щорічний аудит з боку ERNST&YOUNG<br/><br/>
-              ФІНАНСОВУ ЗВІТНІСТЬ Transped s.r.o. можна побачити <a  className={styles.docLink}>тут</a>
-            </p>
+            <Trans
+              t={t}
+              i18nKey="cooperationDescription"
+              components={{
+                root: <p/>,
+                docLink: <a className={styles.docLink} />,
+              }}
+            />
           </div>
         </section>
         <section className={styles.contacts}>
-          <h2 className={styles.title}>Контактні особи</h2>
+          <h2 className={styles.title}>{t('contactsTitle')}</h2>
+          <p className={styles.container}>{t('contactsDescription')}</p>
           <div className={styles.grid}>
-            <ContactCard
-              avatarUrl="/images/contacts/BN.png"
-              name="Бартоломей Неметі"
-              position="Виконавчий директор, менеджер по з/д логістиці"
-              email={'bartolomej.nemethi@grainalliance.com'}
-              phone={'+421 918 403 112'}
-              flags={['sk', 'en', 'ru', 'hu']}
-            />
-            <ContactCard
-              avatarUrl="/images/contacts/Zahlada.png"
-              name="Заглада Євген"
-              position="Фінансовий директор Групи компаній Grain Alliance"
-              email={'evgeniy.zaglada@grainalliance.com'}
-              phone={'+421 918 403 112'}
-              flags={['ua', 'en', 'ru']}
-            />
+            <ContactCard dbName="Bartolomej Némethi" />
+            <ContactCard dbName="Evgeniy Zaglada" />
           </div>
         </section>
       </main>
