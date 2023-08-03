@@ -71,7 +71,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <button className={`${styles.burgerMenu} ${styles['menu-toggle']} ${openMobileMenu && styles['nav-open']}`} onClick={toggleMobileMenu}>
+            <button className={`${styles.burgerMenu} ${styles['menu-toggle']} ${openMobileMenu && styles['nav-open']} ml-15`} onClick={toggleMobileMenu}>
               <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--top']}`}></span>
               <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--middle']}`}></span>
               <span className={`${styles['menu-toggle-bar']} ${styles['menu-toggle-bar--bottom']}`}></span>
