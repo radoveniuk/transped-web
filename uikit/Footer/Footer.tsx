@@ -14,7 +14,7 @@ export default function Footer() {
         <Image className={styles.logo} src="/images/Logo.png" width={137} height={200} alt="Tranped s.r.o logo" />
         <div className={styles.pages}>
           <Link href="/investors">{t('2investors')}</Link>
-          <Link href="/qualty">{t('quality')}</Link>
+          <Link href="/quality">{t('quality')}</Link>
           <Link href="/logystics">{t('logystics')}</Link>
           <Link href="/products">{t('products')}</Link>
         </div>
