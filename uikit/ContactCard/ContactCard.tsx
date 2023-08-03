@@ -12,7 +12,7 @@ type Props = {
 
 const getFlag = (lang: string) => {
   if (lang === 'en') {
-    return 'https://flagcdn.com/w80/gb-eng.png';
+    return 'https://flagcdn.com/w80/gb.png';
   }
   if (lang === 'uk') {
     return 'https://flagcdn.com/w80/ua.png';

@@ -51,6 +51,7 @@
       position: relative;
       transition: color .3s;
       width: min-content;
+      white-space: nowrap;
       &:hover {
         color: #FFF8DF;
       }

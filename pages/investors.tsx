@@ -22,7 +22,7 @@ export default function Investors () {
   return (
     <>
       <Head>
-        <title>Investors | Transped s.r.o.</title>
+        <title>To investors | Transped s.r.o.</title>
         <meta name="description" content="Member of Grain Alliance" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,7 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>Звʼязок<br/> з інвесторами</h1>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`} style={{ whiteSpace: 'nowrap' }}>Звʼязок<br/>з інвесторами</h1>
               <div className={styles.sideInfo}>
                 <div className={styles.sideInfoTitle}>Фінансові звіти:</div>
                 <ul className={styles.sideInfoList}>
