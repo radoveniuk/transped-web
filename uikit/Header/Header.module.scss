@@ -97,8 +97,6 @@
     }
     .burgerMenu {
       background: transparent;
-      width: 30px;
-      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -380,16 +378,9 @@
 }
 
 .menu-toggle {
-  position: absolute;
-  right: 1.5rem;
-  top: 49%;
-  transform: translate(0, -50%);
+  transform: translateY(0);
   height: 26px;
   width: 29px;
-
-  &, &:hover {
-    color: #000;
-  }
 }
 
 .menu-toggle-bar {
