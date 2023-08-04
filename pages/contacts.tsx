@@ -77,7 +77,7 @@ export default function Contacts () {
                   {t('phone')}:<br/>
                   <a href="tel:+421 917 336 901">+421 917 336 901</a><br/>
                   <a href="tel:+421 907 934 592">+421 907 934 592</a><br/>
-                  <a href="tel:+421 907 934 592">+421 907 672 239</a><br/><br/>
+                  <a href="tel:+421 907 672 239">+421 907 672 239</a><br/><br/>
                   <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank">GPS: 48.420511, 22.053232</a>
                 </div>
               </div>
