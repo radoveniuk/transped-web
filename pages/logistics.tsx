@@ -35,8 +35,8 @@ export default function Logistics () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>{t('title')}</h1>
-              <div className={styles.sideInfo}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in`}>{t('title')}</h1>
+              <div className={`${styles.sideInfo} fade-in`}>
                 <div className={styles.sideInfoTitle}>{t('additionalServices')}</div>
                 <Trans
                   t={t}
@@ -47,7 +47,7 @@ export default function Logistics () {
                   }}
                 />
               </div>
-              <Link href="/contacts">
+              <Link href="/contacts" className="fade-in">
                 <Button className="mt-10">{t('orderBtn')}</Button>
               </Link>
             </div>
@@ -55,13 +55,13 @@ export default function Logistics () {
           <Image src="/images/LogisticsHero.png" className={styles.right} width={945} height={531} alt="Grain" />
         </section>
         <section className={`${styles.dark} ${styles.text}`}>
-          <h2 className={styles.title}>{t('transportVariantsTitle')}</h2>
+          <h2 className={`${styles.title} fade-in`}>{t('transportVariantsTitle')}</h2>
           <div className={styles.container}>
             <div className={styles.images}>
               <Image alt="Railway" src="/images/vagon.png" width={503} height={308} />
               <Image alt="Auto" src="/images/car.png" width={498} height={280}/>
             </div>
-            <div className={styles.container}>
+            <div className={`${styles.container} fade-in`}>
               <div>
                 <Trans
                   t={t}
@@ -77,9 +77,9 @@ export default function Logistics () {
           </div>
         </section>
         <section className={`${styles.contacts}`}>
-          <h2 className={styles.title}>{t('contactsTitle')}</h2>
-          <p className={styles.container}>{t('')}</p>
-          <div className={styles.grid}>
+          <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>
+          <p className={`${styles.container} fade-in`}>{t('contactsDescription')}</p>
+          <div className={`${styles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi" />
             <ContactCard dbName="Alexander Boda"/>
           </div>

@@ -34,8 +34,8 @@ export default function Quality () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>{t('title')}</h1>
-              <div className={styles.sideInfo}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in`}>{t('title')}</h1>
+              <div className={`${styles.sideInfo} fade-in`}>
                 <div className={styles.sideInfoTitle}>{t('certs')}:</div>
                 <ul className={styles.sideInfoList}>
                   <li><a className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
@@ -51,7 +51,7 @@ export default function Quality () {
         <section className={`${styles.text} ${styles.dark}`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>
           <div className={styles.container}>
-            <p className={styles.container}>
+            <p className={`${styles.container} fade-in`}>
               <Trans
                 t={t}
                 i18nKey="warrantiesDescription"
@@ -63,8 +63,8 @@ export default function Quality () {
           </div>
         </section>
         <section className={`${styles.contacts}`}>
-          <h2 className={styles.title}>{t('contactsTitle')}</h2>
-          <div className={styles.grid}>
+          <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>
+          <div className={`${styles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi" />
             <ContactCard dbName="Yaroslav Krylov" />
           </div>

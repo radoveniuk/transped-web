@@ -124,3 +124,12 @@ section {
   background-color: #547929;
   color: #FFF8DF;
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}

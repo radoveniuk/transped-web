@@ -33,13 +33,13 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`} style={{ whiteSpace: 'nowrap' }}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in`} style={{ whiteSpace: 'nowrap' }}>
                 <Trans
                   t={t}
                   i18nKey="title"
                 />
               </h1>
-              <div className={styles.sideInfo}>
+              <div className={`${styles.sideInfo} fade-in`}>
                 <div className={styles.sideInfoTitle}>{t('finacialReports')}</div>
                 <ul className={styles.sideInfoList}>
                   <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2023</a></li>
@@ -52,8 +52,8 @@ export default function Investors () {
           <Image src="/images/InvestorsHero.png" className={styles.right} width={1028} height={751} alt="Image of elevators and flags" />
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
-          <h2 className={styles.title}>{t('cooperationTitle')}</h2>
-          <div className={styles.container}>
+          <h2 className={`${styles.title} fade-in`}>{t('cooperationTitle')}</h2>
+          <div className={`${styles.container} fade-in`}>
             <Trans
               t={t}
               i18nKey="cooperationDescription"
@@ -65,9 +65,9 @@ export default function Investors () {
           </div>
         </section>
         <section className={styles.contacts}>
-          <h2 className={styles.title}>{t('contactsTitle')}</h2>
-          <p className={styles.container}>{t('contactsDescription')}</p>
-          <div className={styles.grid}>
+          <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>
+          <p className={`${styles.container} fade-in`}>{t('contactsDescription')}</p>
+          <div className={`${styles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi" />
             <ContactCard dbName="Evgeniy Zaglada" />
           </div>

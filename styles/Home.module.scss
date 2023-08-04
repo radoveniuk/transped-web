@@ -84,6 +84,15 @@
       width: auto;
     }
   }
+  .rightPlaceholder {
+    border-radius: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    @media (max-width: 999px) {
+      height: calc(100vh - 80px);
+      width: auto;
+    }
+  }
 }
 
 .holding {

@@ -35,12 +35,12 @@ export default function Contacts () {
       </Head>
       <main className={DEFAULT_TEXT_FONT.className}>
         <section className={styles.contacts}>
-          <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle}`}>{t('title')}</h1>
+          <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle} fade-in`}>{t('title')}</h1>
           <div className={styles.cards}>
             <div className={styles.addressCard}>
               <div style={{ width: '100%' }}><iframe width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.633622,21.715736+(Transped%20office)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
-              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mt-15 mb-15`}>{t('office')}</div>
-              <div className={styles.contactsData}>
+              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mt-15 mb-15 fade-in`}>{t('office')}</div>
+              <div className={`${styles.contactsData} fade-in`}>
                 <div className={styles.col}>
                   TRANŠPED s r.o.<br/>
                   Hviezdoslavova 1020/8<br/>
@@ -64,7 +64,7 @@ export default function Contacts () {
             </div>
             <div className={`${styles.addressCard} ${styles.reverse}`}>
               <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mb-15`}>{t('storage')}</div>
-              <div className={`${styles.contactsData} mb-15`}>
+              <div className={`${styles.contactsData} mb-15 fade-in`}>
                 <div className={styles.col}>
                   TRANŠPED s r.o.<br/>
                   Priemyselná 204<br/>
@@ -91,8 +91,8 @@ export default function Contacts () {
           </div>
         </section>
         <section className={`${infoPageStyles.contacts} dark`}>
-          <h2 className={infoPageStyles.title}>{t('ourTeam')}</h2>
-          <div className={infoPageStyles.grid}>
+          <h2 className={`${infoPageStyles.title} fade-in`}>{t('ourTeam')}</h2>
+          <div className={`${infoPageStyles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi"/>
             <ContactCard dbName="Alexander Boda"/>
             <ContactCard dbName="Vladyslav Nahynailo"/>
