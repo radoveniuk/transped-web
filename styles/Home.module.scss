@@ -78,17 +78,13 @@
     width: 100%;
     height: auto;
     max-height: calc(100vh - 100px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    &.show {
+      opacity: 1;
+    }
     @media (max-width: 999px) {
       max-height: calc(100vh - 80px);
-      height: calc(100vh - 80px);
-      width: auto;
-    }
-  }
-  .rightPlaceholder {
-    border-radius: 0;
-    width: 100%;
-    height: calc(100vh - 100px);
-    @media (max-width: 999px) {
       height: calc(100vh - 80px);
       width: auto;
     }

@@ -37,7 +37,7 @@ export default function ContactCard(props: Props) {
     };
   }
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} fade-in`}>
       <div className={styles.top}>
         <Image src={data.avatarUrl || '/images/contacts/anonim.png'} height={160} width={160} alt="Card avatar" className={styles.avatar} />
         <div className={styles.info}>

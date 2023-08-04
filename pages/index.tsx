@@ -40,6 +40,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 export default function Home() {
   const { t } = useTranslation('home');
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+
   return (
     <>
       <Head>
@@ -56,8 +57,7 @@ export default function Home() {
               <p className={classNames(styles.description, pageDescriptionFont.className)} dangerouslySetInnerHTML={{ __html: t('title') }} />
             </div>
           </div>
-          {!heroImageLoaded && <Skeleton className={styles.rightPlaceholder} />}
-          <Image className={styles.right} src={'/images/HomeHero.png'} onLoad={() => { setHeroImageLoaded(true); }} width={956} height={751} alt={''} />
+          <Image className={`${styles.right}  ${heroImageLoaded && styles.show}`} src={'/images/HomeHero.png'} onLoad={() => { setHeroImageLoaded(true); }} width={956} height={751} alt={''} />
         </section>
         <section className={styles.holding}>
           <div className={styles.left}>
