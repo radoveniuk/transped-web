@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
@@ -25,6 +26,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Contacts () {
   const { t } = useTranslation('contacts');
+
   return (
     <>
       <Head>
@@ -38,7 +40,7 @@ export default function Contacts () {
           <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle} fade-in`}>{t('title')}</h1>
           <div className={styles.cards}>
             <div className={styles.addressCard}>
-              <div style={{ width: '100%' }}><iframe width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.633622,21.715736+(Transped%20office)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
+              <div style={{ width: '100%' }}><iframe className="fade-in" width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.633622,21.715736+(Transped%20office)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
               <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mt-15 mb-15 fade-in`}>{t('office')}</div>
               <div className={`${styles.contactsData} fade-in`}>
                 <div className={styles.col}>
@@ -86,7 +88,7 @@ export default function Contacts () {
                 <a href="mailto:transped.tv@gmail.com"><Button variant="outlined"><FaEnvelope size={30} /></Button></a>
                 <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank"><Button variant="outlined"><SiGooglemaps size={30} /></Button></a>
               </div>
-              <div style={{ width: '100%' }}><iframe width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.420511,22.053232+(Transper%20storrage)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
+              <div style={{ width: '100%' }}><iframe className="fade-in" width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.420511,22.053232+(Transper%20storrage)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
             </div>
           </div>
         </section>

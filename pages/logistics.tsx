@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -23,6 +24,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Logistics () {
   const { t } = useTranslation('logistics');
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   return (
     <>
       <Head>
@@ -52,7 +54,7 @@ export default function Logistics () {
               </Link>
             </div>
           </div>
-          <Image src="/images/LogisticsHero.png" className={styles.right} width={945} height={531} alt="Grain" />
+          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/LogisticsHero.png" width={945} height={531} alt="Grain" />
         </section>
         <section className={`${styles.dark} ${styles.text}`}>
           <h2 className={`${styles.title} fade-in`}>{t('transportVariantsTitle')}</h2>

@@ -13,18 +13,12 @@ $primaryTextLight: #7D9843;
     justify-content: center;
     color: $primaryText;
 
-    // @media (max-width: 999px) {
-    //   position: absolute;
-    //   width: 100vw;
-    //   height: 100vh;
-    //   top: 0;
-    // }
-
     @media (max-width: 480px) {
       position: absolute;
       width: 100vw;
       height: 100vh;
       top: 0;
+      z-index: 1;
     }
     
     .leftContent {
@@ -113,6 +107,12 @@ $primaryTextLight: #7D9843;
     overflow: hidden;
     height: auto;
     max-height: calc(100vh - 100px);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    &.show {
+      opacity: 1;
+    }
+    z-index: 0;
     @media (max-width: 999px) {
       display: none;
     }

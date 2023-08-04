@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -22,6 +23,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Quality () {
   const { t } = useTranslation('quality');
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   return (
     <>
       <Head>
@@ -38,15 +40,15 @@ export default function Quality () {
               <div className={`${styles.sideInfo} fade-in`}>
                 <div className={styles.sideInfoTitle}>{t('certs')}:</div>
                 <ul className={styles.sideInfoList}>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soy&quot;</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
+                  <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
+                  <li><a href="/docs/TRANSPED GMP Certificate_D0D0FB96-BE9_en UNTIL 190925.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
+                  <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soy&quot;</a></li>
+                  <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <Image src="/images/QualityHero.png" className={styles.right} width={1028} height={751} alt="Image of elevators and flags" />
+          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/QualityHero.png" width={1028} height={751} alt="Image of elevators and flags" />
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>

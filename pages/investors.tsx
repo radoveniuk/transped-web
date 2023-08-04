@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-
-import styles from '@/styles/InfoPage.module.scss';
 import Image from 'next/image';
 import { AiFillFileText } from 'react-icons/ai';
+import { Trans, useTranslation } from 'next-i18next';
+
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 import ContactCard from '@/uikit/ContactCard';
-import { Trans, useTranslation } from 'next-i18next';
+
+import styles from '@/styles/InfoPage.module.scss';
 
 export async function getStaticProps({ locale }: {locale: string}) {
   return {
@@ -21,6 +23,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Investors () {
   const { t } = useTranslation('investors');
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   return (
     <>
       <Head>
@@ -42,14 +45,12 @@ export default function Investors () {
               <div className={`${styles.sideInfo} fade-in`}>
                 <div className={styles.sideInfoTitle}>{t('finacialReports')}</div>
                 <ul className={styles.sideInfoList}>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2023</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2022</a></li>
-                  <li><a className={styles.docLink}><AiFillFileText size={20}/>Year 2021</a></li>
+                  <li><a href="/docs/TRANSPED_Daňové priznanie PO 2022.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>Year 2022</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <Image src="/images/InvestorsHero.png" className={styles.right} width={1028} height={751} alt="Image of elevators and flags" />
+          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/InvestorsHero.png" width={1028} height={751} alt="Image of elevators and flags" />
         </section>
         <section className={`${styles.text} ${styles.dark}`}>
           <h2 className={`${styles.title} fade-in`}>{t('cooperationTitle')}</h2>
