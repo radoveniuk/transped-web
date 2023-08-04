@@ -43,11 +43,12 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: #FFF0D8;
+  background-color: #7D9843;
   color: #225A18;
   overflow-y: hidden;
 }
 main {
+  background-color: #FFF0D8;
   margin-top: 100px;
 }
 @media (max-width: 999px) {
@@ -113,6 +114,10 @@ a {
   .mr-#{$i} { 
     margin-right: $margin;
   }
+}
+
+section {
+  background-color: #FFF0D8;
 }
 
 .dark {
