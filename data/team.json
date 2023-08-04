@@ -37,5 +37,47 @@
     },
     "email": "yaroslav.krylov@grainalliance.com",
     "flags": ["ua", "en"]
+  },
+  {
+    "nameUK": "Александр Бода",
+    "nameEN": "Alexander Boda",
+    "position": {
+      "uk": "Менеджер з автологістики",
+      "sk": "Manažér automobilovej logistiky",
+      "en": "Road Logistics Manager",
+      "hu": "Autóipari logisztikai vezető"
+    },
+    "email": "alexander.boda@grainalliance.com",
+    "phone": "+421 917 336 901",
+    "avatarUrl": "/images/contacts/AB.png",
+    "flags": ["sk", "hu", "ru"]
+  },
+  {
+    "nameUK": "Владислав Нагинайло",
+    "nameEN": "Vladyslav Nahynailo",
+    "position": {
+      "uk": "Виконавчий директор, менеджер з юридичних питань",
+      "sk": "Výkonný riaditeľ, manažér právnych záležitostí",
+      "en": "Executive Director",
+      "hu": "Ügyvezető igazgató, jogi menedzser"
+    },
+    "email": "vladyslav.nahynailo@grainalliance.com",
+    "phone": "+421 950 202 985",
+    "avatarUrl": "/images/contacts/VN.png",
+    "flags": ["uk", "en", "sk"]
+  },
+  {
+    "nameUK": "Таір Мусаєв",
+    "nameEN": "Tair Musayev",
+    "position": {
+      "uk": "Трейдер",
+      "sk": "Obchodník",
+      "en": "Trader",
+      "hu": "Kereskedő"
+    },
+    "email": "tahir.musayev@grainalliance.com",
+    "phone": "+380 99 2619 300",
+    "avatarUrl": "/images/contacts/TM.png",
+    "flags": ["en", "az", "tr", "uk"]
   }
 ]

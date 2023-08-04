@@ -72,8 +72,8 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className={styles.logystics}>
-          <h2 className={classNames(styles.title, pageTitleFont.className)}>{t('logysticsTitle')}</h2>
+        <section className={styles.logistics}>
+          <h2 className={classNames(styles.title, pageTitleFont.className)}>{t('logisticsTitle')}</h2>
           <iframe className={styles.video} width="1120" height="630" src="https://www.youtube.com/embed/A36OtGtN5D8" title="Логістика Transped s.r.o." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </section>
         <section className={styles.aboutUs}>

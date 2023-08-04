@@ -48,7 +48,7 @@ const Header = () => {
             <Link href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
             <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>{t('2investors')}</Link>
             <Link href="/products" className={router.asPath === '/products' ? styles.active : ''}>{t('products')}</Link>
-            <Link href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>{t('logystics')}</Link>
+            <Link href="/logistics" className={router.asPath === '/logistics' ? styles.active : ''}>{t('logistics')}</Link>
             <Link href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>{t('quality')}</Link>
             <Link href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>{t('contacts')}</Link>
           </nav>
@@ -84,7 +84,7 @@ const Header = () => {
           <Link onClick={toggleMobileMenu} href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
           <Link onClick={toggleMobileMenu} href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>{t('2investors')}</Link>
           <Link onClick={toggleMobileMenu} href="/products" className={router.asPath === '/products' ? styles.active : ''}>{t('products')}</Link>
-          <Link onClick={toggleMobileMenu} href="/logystics" className={router.asPath === '/logystics' ? styles.active : ''}>{t('logystics')}</Link>
+          <Link onClick={toggleMobileMenu} href="/logistics" className={router.asPath === '/logistics' ? styles.active : ''}>{t('logistics')}</Link>
           <Link onClick={toggleMobileMenu} href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>{t('quality')}</Link>
           <Link onClick={toggleMobileMenu} href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>{t('contacts')}</Link>
         </nav>

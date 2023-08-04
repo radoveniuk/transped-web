@@ -2,6 +2,8 @@ import Image from 'next/image';
 import styles from './ContactCard.module.scss';
 import db from '@/data/team.json';
 import { useTranslation } from 'next-i18next';
+import { AiFillPhone } from 'react-icons/ai';
+import { FaEnvelope } from 'react-icons/fa';
 
 type Props = {
   avatarUrl?: string;
@@ -59,6 +61,10 @@ export default function ContactCard(props: Props) {
         <div className={styles.contacts}>
           <a href={`mailto:${data.email}`} className={styles.email}>{data.email}</a>
           <a href={`tel:${data.phone}`} className={styles.phone}>{data.phone}</a>
+        </div>
+        <div className={styles.contactsMobile}>
+          {data.phone && <a href={`tel:${data.phone}`} className={styles.buttonLink}><AiFillPhone size={30} /></a>}
+          {data.email && <a href={`mailto:${data.email}`} className={styles.buttonLink}><FaEnvelope size={30} /></a>}
         </div>
       </div>
     </div>

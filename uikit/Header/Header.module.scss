@@ -328,7 +328,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   &.active {
     opacity: 1;
     visibility: visible;
@@ -337,12 +337,17 @@
       display: none;
     }
   }
-
+  
   .nav {
     display: flex;
     flex-direction: column;
     width: 100%;
 
+    @media (max-height: 500px) {
+      overflow: auto;
+      height: calc(100vh - 70px);
+    }
+    
     a {
       display: flex;
       color: #fff;

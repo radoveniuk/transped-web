@@ -69,8 +69,20 @@
       flex-direction: column;
       gap: 10px;
 
+      @media (max-width: 500px) {
+        display: none;
+      }
+
       .email {
         text-decoration: underline;
+      }
+    }
+
+    .contactsMobile {
+      display: none;
+      @media (max-width: 500px) {
+        display: flex;
+        gap: 20px;
       }
     }
   }

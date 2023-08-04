@@ -1,9 +1,16 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import styles from '@/styles/Contacts.module.scss';
-import infoPageStyles from '@/styles/InfoPage.module.scss';
+import { useTranslation } from 'next-i18next';
+import { AiFillPhone } from 'react-icons/ai';
+import { FaEnvelope } from 'react-icons/fa';
+import { SiGooglemaps } from 'react-icons/si';
+
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 import ContactCard from '@/uikit/ContactCard/ContactCard';
+
+import infoPageStyles from '@/styles/InfoPage.module.scss';
+import styles from '@/styles/Contacts.module.scss';
+import Button from '@/uikit/Button/Button';
 
 export async function getStaticProps({ locale }: {locale: string}) {
   return {
@@ -17,6 +24,7 @@ export async function getStaticProps({ locale }: {locale: string}) {
 }
 
 export default function Contacts () {
+  const { t } = useTranslation('contacts');
   return (
     <>
       <Head>
@@ -27,11 +35,11 @@ export default function Contacts () {
       </Head>
       <main className={DEFAULT_TEXT_FONT.className}>
         <section className={styles.contacts}>
-          <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle}`}>Контакти</h1>
+          <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle}`}>{t('title')}</h1>
           <div className={styles.cards}>
             <div className={styles.addressCard}>
-              <div className={styles.map}></div>
-              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mt-15 mb-15`}>Офіс</div>
+              <div style={{ width: '100%' }}><iframe width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.633622,21.715736+(Transped%20office)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
+              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mt-15 mb-15`}>{t('office')}</div>
               <div className={styles.contactsData}>
                 <div className={styles.col}>
                   TRANŠPED s r.o.<br/>
@@ -41,79 +49,55 @@ export default function Contacts () {
                   IČ DPH: SK2021693718
                 </div>
                 <div className={styles.col}>
-                  Телефон:<br/>
-                  +421 56 67 23 940<br/><br/>
-                  GPS: 48.633622, 21.715736<br/><br/>
+                  {t('phone')}:<br/>
+                  <a href="tel:+421 56 67 23 940">+421 56 67 23 940</a><br/><br/>
+                  <a href="https://goo.gl/maps/gMptFj6f8ZKwmg3p6" rel="noreferrer" target="_blank">GPS: 48.633622, 21.715736</a><br/><br/>
                   e-mail:<br/>
-                  lumix.trade@gmail.com
+                  <a href="mailto:lumix.trade@gmail.com">lumix.trade@gmail.com</a>
                 </div>
+              </div>
+              <div className={`mt-20 ${styles.actions}`}>
+                <a href="tel:+421 56 67 23 940"><Button variant="outlined"><AiFillPhone size={30} /></Button></a>
+                <a href="mailto:lumix.trade@gmail.com"><Button variant="outlined"><FaEnvelope size={30} /></Button></a>
+                <a href="https://goo.gl/maps/gMptFj6f8ZKwmg3p6" rel="noreferrer" target="_blank"><Button variant="outlined"><SiGooglemaps size={30} /></Button></a>
               </div>
             </div>
             <div className={`${styles.addressCard} ${styles.reverse}`}>
-              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mb-15`}>Елеватор</div>
+              <div className={`${PAGE_TITLE_FONT.className} ${styles.title} mb-15`}>{t('storage')}</div>
               <div className={`${styles.contactsData} mb-15`}>
                 <div className={styles.col}>
                   TRANŠPED s r.o.<br/>
                   Priemyselná 204<br/>
                   Čierna nad Tisou, SR<br/><br/>
                   e-mail:<br/>
-                  transped.tv@gmail.com<br/>
-                  transped.col@gmail.com
+                  <a href="mailto:transped.tv@gmail.com">transped.tv@gmail.com</a><br/>
+                  <a href="mailto:transped.col@gmail.com">transped.col@gmail.com</a>
                 </div>
                 <div className={styles.col}>
-                  Телефон:<br/>
-                  +421 917 336 901<br/>
-                  +421 907 934 592<br/>
-                  +421 907 672 239<br/><br/>
-                  GPS: 48.420511, 22.053232
+                  {t('phone')}:<br/>
+                  <a href="tel:+421 917 336 901">+421 917 336 901</a><br/>
+                  <a href="tel:+421 907 934 592">+421 907 934 592</a><br/>
+                  <a href="tel:+421 907 934 592">+421 907 672 239</a><br/><br/>
+                  <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank">GPS: 48.420511, 22.053232</a>
                 </div>
               </div>
-              <div className={styles.map}></div>
+              <div className={`mb-20 ${styles.actions}`}>
+                <a href="tel:+421 917 336 901"><Button variant="outlined"><AiFillPhone size={30} /></Button></a>
+                <a href="mailto:transped.tv@gmail.com"><Button variant="outlined"><FaEnvelope size={30} /></Button></a>
+                <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank"><Button variant="outlined"><SiGooglemaps size={30} /></Button></a>
+              </div>
+              <div style={{ width: '100%' }}><iframe width="100%" height="280" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.420511,22.053232+(Transper%20storrage)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
             </div>
           </div>
         </section>
         <section className={`${infoPageStyles.contacts} dark`}>
-          <h2 className={infoPageStyles.title}>Наша команда</h2>
+          <h2 className={infoPageStyles.title}>{t('ourTeam')}</h2>
           <div className={infoPageStyles.grid}>
-            <ContactCard
-              avatarUrl="/images/contacts/BN.png"
-              name="Бартоломей Неметі"
-              position="Виконавчий директор, менеджер по з/д логістиці"
-              email={'bartolomej.nemethi@grainalliance.com'}
-              phone={'+421 918 403 112'}
-              flags={['sk', 'en', 'ru', 'hu']}
-            />
-            <ContactCard
-              name="Александр Бода"
-              avatarUrl="/images/contacts/AB.png"
-              position="Менеджер з автологістики"
-              email={'alexander.boda@grainalliance.com'}
-              phone="+421 917 336 901"
-              flags={['sk', 'hu', 'ru']}
-            />
-            <ContactCard
-              avatarUrl="/images/contacts/VN.png"
-              name="Владислав Нагинайло"
-              position="Виконавчий директор, менеджер з юридичних питань"
-              email={'vladyslav.nahynailo@grainalliance.com'}
-              phone={'+421 950 202 985'}
-              flags={['ua', 'en', 'sk']}
-            />
-            <ContactCard
-              name="Ярослав Крилов"
-              position="Трейдер"
-              email={'yaroslav.krylov@grainalliance.com'}
-              phone=""
-              flags={['ua', 'en']}
-            />
-            <ContactCard
-              avatarUrl="/images/contacts/TM.png"
-              name="Таір Мусаєв"
-              position="Трейдер"
-              email={'tahir.musayev@grainalliance.com'}
-              phone="+380992619300"
-              flags={['en', 'az', 'tr', 'uk']}
-            />
+            <ContactCard dbName="Bartolomej Némethi"/>
+            <ContactCard dbName="Alexander Boda"/>
+            <ContactCard dbName="Vladyslav Nahynailo"/>
+            <ContactCard dbName="Yaroslav Krylov"/>
+            <ContactCard dbName="Tair Musayev"/>
           </div>
         </section>
       </main>

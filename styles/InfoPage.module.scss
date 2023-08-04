@@ -13,7 +13,14 @@ $primaryTextLight: #7D9843;
     justify-content: center;
     color: $primaryText;
 
-    @media (max-width: 999px) {
+    // @media (max-width: 999px) {
+    //   position: absolute;
+    //   width: 100vw;
+    //   height: 100vh;
+    //   top: 0;
+    // }
+
+    @media (max-width: 480px) {
       position: absolute;
       width: 100vw;
       height: 100vh;
@@ -107,11 +114,10 @@ $primaryTextLight: #7D9843;
     height: auto;
     max-height: calc(100vh - 100px);
     @media (max-width: 999px) {
-      max-height: calc(100vh - 80px);
-      height: calc(100vh - 80px);
-      width: auto;
+      display: none;
     }
     @media (max-width: 480px) {
+      display: block;
       max-height: calc(100vh - 80px);
       height: calc(100vh - 80px);
       width: auto;
