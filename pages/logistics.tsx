@@ -49,9 +49,6 @@ export default function Logistics () {
                   }}
                 />
               </div>
-              <Link href="/contacts" className="fade-in">
-                <Button className="mt-10">{t('orderBtn')}</Button>
-              </Link>
             </div>
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/LogisticsHero.png" width={945} height={531} alt="Grain" />
@@ -70,9 +67,9 @@ export default function Logistics () {
                   i18nKey="transportVariantsDescription"
                 />
                 <div className="mt-20">
-                  <Link href="/quality">
+                  <a href="/docs/Certifikát vahy.pdf" download target="_blank" rel="noreferer">
                     <Button variant="outlined">{t('certs')}</Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

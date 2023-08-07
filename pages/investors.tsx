@@ -60,7 +60,7 @@ export default function Investors () {
               i18nKey="cooperationDescription"
               components={{
                 root: <p/>,
-                docLink: <a className={styles.docLink} />,
+                docLink: <a className={styles.docLink} href="/docs/TRANSPED_Daňové priznanie PO 2022.pdf" download target="_blank" rel="noreferer"  />,
               }}
             />
           </div>

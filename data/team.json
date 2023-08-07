@@ -6,7 +6,8 @@
       "uk": "Фінансовий директор Групи компаній Grain Alliance",
       "sk": "Finančný riaditeľ skupiny Grain Alliance",
       "en": "Chief Financial Officer of Grain Alliance Group",
-      "hu": "A Grain Alliance Group pénzügyi igazgatója"
+      "hu": "A Grain Alliance Group pénzügyi igazgatója",
+      "pl": "Dyrektor finansowy Grain Alliance Group"
     },
     "email": "evgeniy.zaglada@grainalliance.com",
     "avatarUrl": "/images/contacts/Zahlada.png",
@@ -19,11 +20,12 @@
       "uk": "Виконавчий директор, менеджер по з/д логістиці",
       "sk": "Výkonný riaditeľ, manažér železničnej logistiky",
       "en": "Executive Director, Rail Logistics Manager",
-      "hu": "Ügyvezető igazgató, vasúti logisztikai vezető"
+      "hu": "Ügyvezető igazgató, vasúti logisztikai vezető",
+      "pl": "Dyrektor wykonawczy, kierownik ds. logistyki kolejowej"
     },
     "email": "bartolomej.nemethi@grainalliance.com",
     "phone": "+421 918 403 112",
-    "avatarUrl": "/images/contacts/BN.png",
+    "avatarUrl": "/images/contacts/Bartolomej.webp",
     "flags": ["sk", "en", "ru", "hu"]
   },
   {
@@ -33,9 +35,11 @@
       "uk": "Трейдер",
       "sk": "Obchodník",
       "en": "Trader",
-      "hu": "Kereskedő"
+      "hu": "Kereskedő",
+      "pl": "Handlowiec"
     },
     "email": "yaroslav.krylov@grainalliance.com",
+    "phone": "+380 050 440 03 73",
     "flags": ["ua", "en"]
   },
   {
@@ -45,7 +49,8 @@
       "uk": "Менеджер з автологістики",
       "sk": "Manažér automobilovej logistiky",
       "en": "Road Logistics Manager",
-      "hu": "Autóipari logisztikai vezető"
+      "hu": "Autóipari logisztikai vezető",
+      "pl": "Kierownik ds. logistyki drogowej"
     },
     "email": "alexander.boda@grainalliance.com",
     "phone": "+421 917 336 901",
@@ -59,7 +64,8 @@
       "uk": "Виконавчий директор, менеджер з юридичних питань",
       "sk": "Výkonný riaditeľ, manažér právnych záležitostí",
       "en": "Executive Director",
-      "hu": "Ügyvezető igazgató, jogi menedzser"
+      "hu": "Ügyvezető igazgató, jogi menedzser",
+      "pl": "Dyrektor wykonawczy, kierownik ds. prawnych"
     },
     "email": "vladyslav.nahynailo@grainalliance.com",
     "phone": "+421 950 202 985",
@@ -73,7 +79,8 @@
       "uk": "Трейдер",
       "sk": "Obchodník",
       "en": "Trader",
-      "hu": "Kereskedő"
+      "hu": "Kereskedő",
+      "pl": "Handlowiec"
     },
     "email": "tahir.musayev@grainalliance.com",
     "phone": "+380 99 2619 300",

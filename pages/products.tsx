@@ -10,6 +10,15 @@ import ContactCard from '@/uikit/ContactCard/ContactCard';
 import Button from '@/uikit/Button/Button';
 
 import styles from '@/styles/InfoPage.module.scss';
+import Lightbox from 'react-18-image-lightbox';
+
+const images = [
+  '/images/cultures-gallery/1.webp',
+  '/images/cultures-gallery/2.webp',
+  '/images/cultures-gallery/3.webp',
+  '/images/cultures-gallery/4.webp',
+  '/images/cultures-gallery/5.webp',
+];
 
 export async function getStaticProps({ locale }: {locale: string}) {
   return {
@@ -25,6 +34,9 @@ export async function getStaticProps({ locale }: {locale: string}) {
 export default function Products () {
   const { t } = useTranslation('products');
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+  const [isOpenGallery, setIsOpenGallery] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(1);
+  const [galleryHash, setGalleryHash] = useState('1');
   return (
     <>
       <Head>
@@ -83,7 +95,31 @@ export default function Products () {
               <p className={styles.alt}>{t('soy')}</p>
             </div>
           </div>
-          <Button>{t('allCulturesBtn')}</Button>
+          <Button
+            onClick={() => {
+              setIsOpenGallery(true);
+              setTimeout(() => {
+                setGalleryHash((new Date()).getTime().toString());
+              }, 100);
+            }}
+          >
+            {t('allCulturesBtn')}
+          </Button>
+          {isOpenGallery && (
+            <Lightbox
+              key={galleryHash}
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => setIsOpenGallery(false)}
+              onMovePrevRequest={() => {
+                setPhotoIndex((photoIndex + images.length - 1) % images.length);
+              }}
+              onMoveNextRequest={() => {
+                setPhotoIndex((photoIndex + 1) % images.length);
+              }}
+            />
+          )}
         </section>
         <section className={`${styles.contacts} ${styles.dark}`}>
           <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>

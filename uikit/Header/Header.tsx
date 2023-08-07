@@ -42,7 +42,7 @@ const Header = () => {
       <header className={classNames(DEFAULT_TEXT_FONT.className, styles.header)}>
         <div className={styles.headerContent}>
           <div className={styles.logoContainer}>
-            <Link href="/" onClick={() => void setOpenMobileMenu(false)}><Image className={styles.logo} src="/images/Logo.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
+            <Link href="/" onClick={() => void setOpenMobileMenu(false)}><Image className={styles.logo} src="/images/Logo1.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
           </div>
           <nav className={styles.nav}>
             <Link href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>

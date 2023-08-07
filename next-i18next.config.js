@@ -2,7 +2,7 @@
 module.exports = {
   i18n: {
     defaultLocale: 'uk',
-    locales: ['uk', 'sk', 'en', 'hu'],
+    locales: ['uk', 'sk', 'en', 'hu', 'pl'],
     // locales: ['uk', 'sk', 'en', 'de', 'it', 'hu', 'pl'],
   },
 };
