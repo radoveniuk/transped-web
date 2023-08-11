@@ -7,7 +7,9 @@
       "sk": "Finančný riaditeľ skupiny Grain Alliance",
       "en": "Chief Financial Officer of Grain Alliance Group",
       "hu": "A Grain Alliance Group pénzügyi igazgatója",
-      "pl": "Dyrektor finansowy Grain Alliance Group"
+      "pl": "Dyrektor finansowy Grain Alliance Group",
+      "de": "Finanzdirektor der Grain Alliance Group of Companies"
+    
     },
     "email": "evgeniy.zaglada@grainalliance.com",
     "avatarUrl": "/images/contacts/Zahlada.png",
@@ -21,7 +23,8 @@
       "sk": "Výkonný riaditeľ, manažér železničnej logistiky",
       "en": "Executive Director, Rail Logistics Manager",
       "hu": "Ügyvezető igazgató, vasúti logisztikai vezető",
-      "pl": "Dyrektor wykonawczy, kierownik ds. logistyki kolejowej"
+      "pl": "Dyrektor wykonawczy, kierownik ds. logistyki kolejowej",
+      "de": "Geschäftsführer, Leiter Bahnlogistik"
     },
     "email": "bartolomej.nemethi@grainalliance.com",
     "phone": "+421 918 403 112",
@@ -36,10 +39,12 @@
       "sk": "Obchodník",
       "en": "Trader",
       "hu": "Kereskedő",
-      "pl": "Handlowiec"
+      "pl": "Handlowiec",
+      "de": "Händler"
     },
     "email": "yaroslav.krylov@grainalliance.com",
     "phone": "+380 050 440 03 73",
+    "avatarUrl": "/images/contacts/YK.webp",
     "flags": ["ua", "en"]
   },
   {
@@ -50,7 +55,8 @@
       "sk": "Manažér automobilovej logistiky",
       "en": "Road Logistics Manager",
       "hu": "Autóipari logisztikai vezető",
-      "pl": "Kierownik ds. logistyki drogowej"
+      "pl": "Kierownik ds. logistyki drogowej",
+      "de": "Leiter LKW-Logistik"
     },
     "email": "alexander.boda@grainalliance.com",
     "phone": "+421 917 336 901",
@@ -65,7 +71,8 @@
       "sk": "Výkonný riaditeľ, manažér právnych záležitostí",
       "en": "Executive Director",
       "hu": "Ügyvezető igazgató, jogi menedzser",
-      "pl": "Dyrektor wykonawczy, kierownik ds. prawnych"
+      "pl": "Dyrektor wykonawczy, kierownik ds. prawnych",
+      "de": "Geschäftsführer, Leiter für für juristische Angelegenheiten"
     },
     "email": "vladyslav.nahynailo@grainalliance.com",
     "phone": "+421 950 202 985",
@@ -80,7 +87,8 @@
       "sk": "Obchodník",
       "en": "Trader",
       "hu": "Kereskedő",
-      "pl": "Handlowiec"
+      "pl": "Handlowiec",
+      "de": "Händler"
     },
     "email": "tahir.musayev@grainalliance.com",
     "phone": "+380 99 2619 300",
