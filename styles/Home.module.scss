@@ -9,6 +9,7 @@
   }
   
   .left {
+    padding-left: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,7 @@
 
     @media (max-width: 999px) {
       flex-grow: 1;
+      padding-left: 0;
     }
 
     @media (max-width: 699px) {
@@ -41,7 +43,7 @@
       .description {
         max-width: 450px;
         margin-top: 52px;
-        font-size: 40px;
+        font-size: 30px;
       }
       @media (max-width: 1399px) {
         .title {
@@ -61,7 +63,7 @@
       }
       
       @media (max-width: 699px) {
-        background-color: rgba(255, 248, 223, 0.87);
+        background-color: rgba(255, 255, 255, 0.87);
         width: 100vw;
         .title {
           font-size: 40px;
@@ -95,11 +97,9 @@
 }
 
 .holding {
-  background-color: #547929;
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  color: #FFF8DF;
 
   @media (max-width: 999px) {
     display: block;
@@ -187,8 +187,6 @@
 }
 
 .aboutUs {
-  background-color: #547929;
-  color: #FFF8DF;
   padding: 50px;
   display: flex;
   align-items: center;
@@ -292,8 +290,6 @@
 }
 
 .cooperation {
-  background-color: #547929;
-  color: #FFF8DF;
   padding: 50px;
   clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0% 10%);
   display: flex;
@@ -352,9 +348,9 @@
     position: relative;
     max-width: min-content;
     white-space: nowrap;
-    color: #fff;
+    color: #389428;
     &:hover {
-      color: #FFF8DF;
+      color: #00693C;
     }
   }
   &::after {

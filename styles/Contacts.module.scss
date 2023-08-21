@@ -1,5 +1,5 @@
 $primaryText: #225A18;
-$primaryTextLight: #7D9843;
+$primaryTextLight: #389428;
 
 .title {
   font-size: 50px;
@@ -16,6 +16,7 @@ $primaryTextLight: #7D9843;
 .pageTitle {
   font-size: 60px;
   max-width: min-content;
+  white-space: nowrap;
 }
 
 @media (max-width: 1399px) {
@@ -30,74 +31,36 @@ $primaryTextLight: #7D9843;
   }
 }
 
-.contacts {
+.geoData {
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-
-  .cards {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-gap: 50px;
-
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-    }
-
-    @media (max-width: 500px) {
-      grid-template-columns: 1fr;
-      padding: 20px;
-    }
-
-    .addressCard {
-      width: 500px;
-      padding: 0 20px 20px 20px;
-      display: flex;
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    @media (max-width: 999px) {
       flex-direction: column;
-      align-items: center;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #bdd68796 32.81%, #bdd687a8 35.42%, $primaryTextLight 100%);
+      gap: 30px;
+    }
 
-      @media (max-width: 900px) {
-        width: 100%;
-      }
-
-      @media (max-width: 500px) {
-        width: calc(100vw - 40px);
-      }
-      
-      &.reverse {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #bdd68796 32.81%, #bdd687a8 35.42%, $primaryTextLight 100%);
-        padding: 20px 20px 0 20px;
-      }
-
-      .title {
-        font-size: 30px;
-      }
-      .contactsData {
-        display: flex;
-        gap: 20px;
-
-        @media (max-width: 500px) {
-          flex-direction: column;
-        }
-
-        a:hover {
-          text-decoration: underline;
+    .left {
+      iframe {
+        width: 600px;
+        height: 400px;
+        max-width: 100%;
+        @media (max-width: 999px) {
+          
         }
       }
-      .actions {
-        display: flex;
-        gap: 10px;
-        button {
-          border-radius: 50%;
-          height: 45px;
-          width: 45px;
-          padding: 0;
-        }
-      }
+    }
+
+    .right {
+      display: flex;
+      gap: 50px;
+      flex-direction: column;
     }
   }
 }

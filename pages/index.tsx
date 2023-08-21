@@ -57,7 +57,7 @@ export default function Home() {
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} src={'/images/HomeHero.png'} onLoad={() => { setHeroImageLoaded(true); }} width={956} height={751} alt={''} />
         </section>
-        <section className={styles.holding}>
+        <section className={`${styles.holding} dark`}>
           <div className={styles.left}>
             <a className={styles.imageLink} href="http://www.grainalliance.com/" target="_blank" rel="noreferer"><Image className={styles.holdingLogo} src={'/images/GrainAlliance.png'} width={262} height={387} alt={''} /></a>
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
           <h2 className={classNames(styles.title, pageTitleFont.className, 'fade-in')}>{t('logisticsTitle')}</h2>
           <iframe className={styles.video} width="1120" height="630" src="https://www.youtube.com/embed/A36OtGtN5D8" title="Логістика Transped s.r.o." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </section>
-        <section className={styles.aboutUs}>
+        <section className={`${styles.aboutUs} dark`}>
           <h2 className={classNames(styles.title, pageTitleFont.className, 'fade-in')}>{t('aboutUsTitle')}</h2>
           <div className={styles.content}>
             <div className={classNames(styles.left, textFont.className, 'fade-in')}>
@@ -114,7 +114,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className={styles.cooperation}>
+        <section className={`${styles.cooperation} dark`}>
           <h2 className={classNames(styles.title, pageTitleFont.className, 'fade-in')}>{t('cooperationTitle')}</h2>
           <div className={classNames(styles.description, textFont.className, 'fade-in')}>
             {t('certs')}<br/><br/>

@@ -50,7 +50,7 @@ export default function Quality () {
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/QualityHero.png" width={1028} height={751} alt="Image of elevators and flags" />
         </section>
-        <section className={`${styles.text} ${styles.dark}`}>
+        <section className={`${styles.text} dark`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>
           <div className={styles.container}>
             <p className={`${styles.container} fade-in`}>

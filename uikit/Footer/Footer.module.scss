@@ -1,19 +1,16 @@
 .footer {
   width: 100vw;
-  background-color: #7D9843;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 150px;
   font-size: 20px;
 
   @media (max-width: 1200px) {
     flex-direction: column;
-    padding-right: 20px;
   }
   
   @media (max-width: 900px) {
-    padding-right: 0;
     font-size: 16px;
     align-items: center;
     img {
@@ -36,41 +33,11 @@
     margin: 30px auto;
     gap: 20px;
     align-items: center;
-    color: #fff;
   }
-}
 
-.pageLink {
-  & {
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
-    position: relative;
-    max-width: min-content;
-    white-space: nowrap;
-    color: #fff;
-    &:hover {
-      color: #FFF8DF;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    top: 25px;
-    left: 0;
-    background-color: #00693C;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  &:hover::after {
-    @media (min-width: 999px) {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+  .rights {
+    p {
+      font-size: 14px;
     }
   }
 }

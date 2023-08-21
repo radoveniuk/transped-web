@@ -1,4 +1,4 @@
-$buttonColor: #7D9843;
+$buttonColor: #389428;
 $buttonHoverColor: #225A18;
 $buttonActiveColor: #326d28;
 
@@ -35,7 +35,7 @@ $buttonActiveColor: #326d28;
 
   &.outlined {
     color: $buttonColor;
-    background-color: #FFF8DF;
+    background-color: #fff;
     border: 2px solid $buttonColor;
   
     &:hover {

@@ -33,20 +33,23 @@ export default function Contacts () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={DEFAULT_TEXT_FONT.className}>
-        <section className={styles.contacts}>
-          <h1 className={`${PAGE_TITLE_FONT.className} ${styles.pageTitle} fade-in`}>{t('title')}</h1>
-          <p>TRANSPED s r.o., Priemyselná 204, Čierna nad Tisou, SR<br/><a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank">GPS: 48.420511, 22.053232</a></p>
-          <div style={{ maxWidth: 800, width: '100%' }}><iframe className="fade-in" width="100%" height="480" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.420511,22.053232+(Transper%20storrage)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
-          <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank"><Button variant="outlined">{t('navigate')}<SiGooglemaps size={30} /></Button></a>
-        </section>
-        <section className={`${infoPageStyles.contacts} dark`}>
+        <section className={`${infoPageStyles.contacts}`}>
           <h2 className={`${infoPageStyles.title} fade-in`}>{t('ourTeam')}</h2>
           <div className={`${infoPageStyles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi"/>
             <ContactCard dbName="Vladyslav Nahynailo"/>
             <ContactCard dbName="Alexander Boda"/>
-            <ContactCard dbName="Yaroslav Krylov"/>
             <ContactCard dbName="Tair Musayev"/>
+          </div>
+        </section>
+        <section className={`dark ${styles.geoData}`}>
+          <h1 className={`${PAGE_TITLE_FONT.className} ${infoPageStyles.title} fade-in`}>{t('address')}</h1>
+          <div className={styles.content}>
+            <div className={styles.left}><iframe className="fade-in" frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=280&amp;hl=en&amp;q=48.420511,22.053232+(Transper%20storrage)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" /></div>
+            <div className={styles.right}>
+              <p><span style={{ fontSize: 20 }}>TRANSPED s.r.o.</span><br/><br/>Priemyselná 204, <br/>Čierna nad Tisou,<br/>Slovakia<br/><br/><a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank">GPS: 48.420511, 22.053232</a></p>
+              <a href="https://goo.gl/maps/Y8aRe9SKyrfwdrk86" rel="noreferrer" target="_blank"><Button variant="outlined">{t('navigate')}<SiGooglemaps size={30} /></Button></a>
+            </div>
           </div>
         </section>
       </main>

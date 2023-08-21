@@ -62,7 +62,7 @@ export default function Products () {
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/ProductsHero.png" width={945} height={531} alt="Grain" />
         </section>
-        <section className={`${styles.text} ${styles.dark}`}>
+        <section className={`${styles.text} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('qualityProductTitle')}</h2>
           <p className={`${styles.container} fade-in`}>
             <Trans
@@ -121,7 +121,7 @@ export default function Products () {
             />
           )}
         </section>
-        <section className={`${styles.contacts} ${styles.dark}`}>
+        <section className={`${styles.contacts} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>
           <p className={`${styles.container} fade-in`}>{t('contactsDescription')}</p>
           <div className={styles.grid}>

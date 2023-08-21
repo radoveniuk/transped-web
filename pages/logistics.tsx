@@ -53,7 +53,7 @@ export default function Logistics () {
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/LogisticsHero.png" width={945} height={531} alt="Grain" />
         </section>
-        <section className={`${styles.dark} ${styles.text}`}>
+        <section className={`dark ${styles.text}`}>
           <h2 className={`${styles.title} fade-in`}>{t('transportVariantsTitle')}</h2>
           <div className={styles.container}>
             <div className={styles.images}>
