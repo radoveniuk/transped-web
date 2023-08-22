@@ -60,7 +60,18 @@ export default function Home() {
           <div className={styles.left}>
             <div className={`${styles.leftContent} fade-in`}>
               <h1 className={classNames(styles.title, pageTitleFont.className)}>Transped <span className={styles.postfix}>s.r.o.</span></h1>
-              <p className={classNames(styles.description, pageDescriptionFont.className)} dangerouslySetInnerHTML={{ __html: t('title') }} />
+              <div className={classNames(styles.description, pageDescriptionFont.className)}>
+                <Trans
+                  t={t}
+                  i18nKey="title"
+                  components={{
+                    b: <b/>,
+                    flipContainer: <div className={styles.flipContainer} />,
+                    flip: <div className={styles.flipText}/>,
+                    div: <div/>,
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className={`${styles.right} fade-in`} />
