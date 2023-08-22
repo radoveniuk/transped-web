@@ -17,7 +17,6 @@ $primaryTextLight: #389428;
       position: absolute;
       width: 100vw;
       height: 100vh;
-      top: 0;
       z-index: 1;
     }
     
@@ -64,6 +63,10 @@ $primaryTextLight: #389428;
           flex-direction: column;
           gap: 20px;
           list-style: none;
+
+          &.listStyle {
+            list-style: inside;
+          }
         }
       }
       .docLink {

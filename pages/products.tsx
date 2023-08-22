@@ -55,6 +55,10 @@ export default function Products () {
                   t={t}
                 />
               </h1>
+              <Trans
+                t={t}
+                i18nKey="description"
+              />
               <Link className="fade-in" href="/contacts">
                 <Button>{t('contactsBtn')}</Button>
               </Link>
@@ -64,13 +68,20 @@ export default function Products () {
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('qualityProductTitle')}</h2>
-          <p className={`${styles.container} fade-in`}>
-            <Trans
-              t={t}
-              i18nKey="qualityProductDescription"
-              components={{ pageLink: <Link href="/quality"/> }}
-            />
-          </p>
+          <div className={styles.container}>
+            <div className={styles.images}>
+              <Image alt="Harvest" src="/images/harvest0.webp" width={957} height={751} />
+            </div>
+            <div className={`${styles.container} fade-in`}>
+              <div>
+                <Trans
+                  t={t}
+                  i18nKey="qualityProductDescription"
+                  components={{ pageLink: <Link href="/quality"/> }}
+                />
+              </div>
+            </div>
+          </div>
           <Link href="/quality">
             <Button variant="outlined">{t('certs')}</Button>
           </Link>

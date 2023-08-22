@@ -48,7 +48,7 @@ export default function Quality () {
               </div>
             </div>
           </div>
-          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/QualityHero.png" width={1028} height={751} alt="Image of elevators and flags" />
+          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/harvest1.webp" width={1028} height={751} alt="Image of elevators and flags" />
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>
@@ -60,7 +60,7 @@ export default function Quality () {
               />
             </p>
             <div className={styles.images}>
-              <Image alt="Harvest" src="/images/harvest.png" width={536} height={336} />
+              <Image alt="Harvest" src="/images/harvest2.webp" width={945} height={531} />
             </div>
           </div>
         </section>

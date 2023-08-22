@@ -161,6 +161,9 @@
   align-items: center;
   padding: 50px;
   gap: 50px;
+  @media (max-width: 999px) {
+    gap: 30px;
+  }
   .title {
     font-size: 50px;
     @media (max-width: 999px) {
@@ -195,6 +198,7 @@
   clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0% 10%);
   @media (max-width: 999px) {
     clip-path: none;
+    gap: 30px;
   }
   
   .title {
@@ -250,6 +254,10 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
+
+  @media (max-width: 999px) {
+    gap: 30px;
+  }
   
   .title {
     font-size: 50px;
@@ -299,6 +307,7 @@
 
   @media (max-width: 999px) {
     clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 0 100%, 0% 5%);
+    gap: 30px;
   }
 
   .title {

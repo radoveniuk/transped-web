@@ -44,15 +44,23 @@ const Header = () => {
           <div className={styles.logoContainer}>
             <Link href="/" onClick={() => void setOpenMobileMenu(false)}><Image className={styles.logo} src="/images/Logo1.png" width={108} height={157} alt="Tranped s.r.o logo" /></Link>
           </div>
-          <div className={styles.centerActions}>
+          <nav className={styles.nav}>
+            <Link href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
+            <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>{t('2investors')}</Link>
+            <Link href="/products" className={router.asPath === '/products' ? styles.active : ''}>{t('products')}</Link>
+            <Link href="/logistics" className={router.asPath === '/logistics' ? styles.active : ''}>{t('logistics')}</Link>
+            <Link href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>{t('quality')}</Link>
+            <Link href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>{t('contacts')}</Link>
+          </nav>
+          <div className={styles.rightActions}>
             <ul className={styles.langs}>
               {LANGS.map((l) => (
                 <li key={l}>
                   <Link className={styles.link} href={router.asPath} locale={l} title={l}>
                     <Image
                       src={getFlag(l)}
-                      width="25"
-                      height="17"
+                      width="20"
+                      height="14"
                       alt={l}
                       className={l === i18n.language ? styles.active : ''}
                     />
@@ -60,17 +68,7 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <nav className={styles.nav}>
-              <Link href="/" className={router.asPath === '/' ? styles.active : ''}>{t('home')}</Link>
-              <Link href="/investors" className={router.asPath === '/investors' ? styles.active : ''}>{t('2investors')}</Link>
-              <Link href="/products" className={router.asPath === '/products' ? styles.active : ''}>{t('products')}</Link>
-              <Link href="/logistics" className={router.asPath === '/logistics' ? styles.active : ''}>{t('logistics')}</Link>
-              <Link href="/quality" className={router.asPath === '/quality' ? styles.active : ''}>{t('quality')}</Link>
-              <Link href="/contacts" className={router.asPath === '/contacts' ? styles.active : ''}>{t('contacts')}</Link>
-            </nav>
-          </div>
-          <div className={styles.rightActions}>
-            <div className={styles.link}>
+            <div className={`${styles.langsDropdown} ${styles.link}`}>
               <div className={styles.top}>{i18n.language}<IoIosArrowDown size={16} /></div>
               <div className={styles.bot}>
                 <div className={styles.links}>

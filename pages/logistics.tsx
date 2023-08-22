@@ -44,7 +44,7 @@ export default function Logistics () {
                   t={t}
                   i18nKey="additionalServicesList"
                   components={{
-                    ul: <ul className={styles.sideInfoList} />,
+                    ul: <ul className={`${styles.sideInfoList} ${styles.listStyle}`} />,
                     li: <li />,
                   }}
                 />
@@ -66,14 +66,12 @@ export default function Logistics () {
                   t={t}
                   i18nKey="transportVariantsDescription"
                 />
-                <div className="mt-20">
-                  <a href="/docs/Certifikát vahy.pdf" download target="_blank" rel="noreferer">
-                    <Button variant="outlined">{t('certs')}</Button>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
+          <a href="/docs/Certifikát vahy.pdf" download target="_blank" rel="noreferer">
+            <Button variant="outlined">{t('certs')}</Button>
+          </a>
         </section>
         <section className={`${styles.contacts}`}>
           <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>

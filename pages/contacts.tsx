@@ -33,7 +33,7 @@ export default function Contacts () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={DEFAULT_TEXT_FONT.className}>
-        <section className={`${infoPageStyles.contacts}`}>
+        <section className={`${PAGE_TITLE_FONT.className} ${infoPageStyles.contacts}`}>
           <h2 className={`${infoPageStyles.title} fade-in`}>{t('ourTeam')}</h2>
           <div className={`${infoPageStyles.grid} fade-in`}>
             <ContactCard dbName="Bartolomej Némethi"/>
