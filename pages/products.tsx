@@ -90,7 +90,7 @@ export default function Products () {
           <h2 className={`${styles.title} fade-in`}>{t('cultures')}</h2>
           <div className={`${styles.grid} fade-in`}>
             <div className={styles.photoCard}>
-              <Image className={styles.photo} src="/images/sunf.png" width={434} height={439} alt="Photo" />
+              <Image className={styles.photo} src="/images/sunf1.png" width={434} height={439} alt="Photo" />
               <p className={styles.alt}>{t('sunflower')}</p>
             </div>
             <div className={styles.photoCard}>

@@ -14,13 +14,14 @@
     align-items: center;
     justify-content: center;
     color: #225A18;
-
+    
+    // @media (max-width: 999px) {
+      //   flex-grow: 1;
+      //   padding-left: 0;
+      // }
+      
     @media (max-width: 999px) {
-      flex-grow: 1;
       padding-left: 0;
-    }
-
-    @media (max-width: 699px) {
       position: absolute;
       width: 100vw;
       height: 100vh;
@@ -32,6 +33,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      @media (max-width: 999px) {
+        padding: 24px 12px;
+      }
       .title {
         white-space: nowrap;
         font-size: 60px;
@@ -41,9 +45,14 @@
       }
       
       .description {
+        width: 450px;
         max-width: 450px;
         margin-top: 52px;
         font-size: 30px;
+
+        @media (max-width: 450px) {
+          width: 100%;
+        }
       }
       @media (max-width: 1399px) {
         .title {
@@ -58,11 +67,11 @@
         }
       }
 
-      @media (max-width: 999px) {
-        padding: 40px;
-      }
+      // @media (max-width: 999px) {
+      //   padding: 40px;
+      // }
       
-      @media (max-width: 699px) {
+      @media (max-width: 999px) {
         background-color: rgba(255, 255, 255, 0.87);
         width: 100vw;
         .title {
@@ -79,13 +88,17 @@
   }
   
   .right {
-    width: 100%;
-    height: auto;
+    margin-left: auto;
+    // width: auto;
+    height: calc(100vh - 100px);
     max-height: calc(100vh - 100px);
     opacity: 0;
     transition: opacity 0.8s ease;
     &.show {
       opacity: 1;
+    }
+    @media (min-width: 1700px) {
+      width: auto;
     }
     @media (max-width: 999px) {
       max-height: calc(100vh - 80px);

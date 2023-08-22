@@ -39,6 +39,15 @@ export default function Home() {
   const { t } = useTranslation('home');
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
+  const scrollDown = () => {
+    const width = window.innerWidth;
+    let top = window.innerHeight - 100;
+    if (width < 1000) {
+      top = window.innerHeight - 79;
+    }
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Head>
@@ -56,6 +65,7 @@ export default function Home() {
             </div>
           </div>
           <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} src={'/images/HomeHero.png'} onLoad={() => { setHeroImageLoaded(true); }} width={956} height={751} alt={''} />
+          <a className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="" onClick={scrollDown} />
         </section>
         <section className={`${styles.holding} dark`}>
           <div className={styles.left}>

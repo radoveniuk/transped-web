@@ -58,7 +58,7 @@ export default function Logistics () {
           <div className={styles.container}>
             <div className={styles.images}>
               <Image alt="Railway" src="/images/vagon.png" width={503} height={308} />
-              <Image alt="Auto" src="/images/car.png" width={498} height={280}/>
+              <Image alt="Auto" src="/images/car.webp" width={498} height={280}/>
             </div>
             <div className={`${styles.container} fade-in`}>
               <div>

@@ -111,9 +111,8 @@ $primaryTextLight: #389428;
   }
   
   .right {
-    width: 100%;
     overflow: hidden;
-    height: 100%;
+    height: calc(100vh - 100px);
     max-height: calc(100vh - 100px);
     opacity: 0;
     transition: opacity 0.8s ease;
