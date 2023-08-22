@@ -128,10 +128,10 @@ export default function Home() {
           <div className={classNames(styles.description, textFont.className, 'fade-in')}>
             {t('certs')}<br/><br/>
             <ul className={styles.sertificates}>
-              <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.pageLink}><AiFillFileText size={20}/>ISCC</a></li>
-              <li><a href="/docs/TRANSPED GMP Certificate_D0D0FB96-BE9_en UNTIL 190925.pdf" download target="_blank" rel="noreferer" className={styles.pageLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
-              <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.pageLink}><AiFillFileText size={20}/>&quot;Europe Soya&quot;</a></li>
-              <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.pageLink}><AiFillFileText size={20}/>UKSUP</a></li>
+              <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
+              <li><a href="/docs/TRANSPED GMP Certificate_D0D0FB96-BE9_en UNTIL 190925.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
+              <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soya&quot;</a></li>
+              <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
             </ul>
             <br/>
             <Trans t={t} i18nKey="cooperationDescription" />
