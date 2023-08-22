@@ -13,12 +13,17 @@ $primaryTextLight: #389428;
     justify-content: center;
     color: $primaryText;
 
-    @media (max-width: 480px) {
+    @media (max-width: 991px) {
       position: absolute;
       top: 0;
       width: 100vw;
       height: 100vh;
       z-index: 1;
+    }
+
+    @media (max-width: 991px) and (max-height: 400px) {
+      top: 80px;
+      height: calc(100vh - 80px);
     }
     
     .leftContent {
@@ -38,7 +43,7 @@ $primaryTextLight: #389428;
         }
       }
       
-      @media (max-width: 999px) {
+      @media (max-width: 991px) {
         max-width: 100%;
         padding: 30px;
         background-color: rgba(255, 255, 255, 0.87);
@@ -49,10 +54,19 @@ $primaryTextLight: #389428;
         }
       }
 
+      @media (max-width: 991px) and (max-height: 400px) {
+        height: 100%;
+      }
+
       .sideInfo {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        font-size: 20px;
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
         
         .sideInfoTitle {
           font-size: 30px;
@@ -64,6 +78,10 @@ $primaryTextLight: #389428;
           flex-direction: column;
           gap: 20px;
           list-style: none;
+
+          @media (max-width: 991px) {
+            gap: 10px;
+          }
 
           &.listStyle {
             list-style: inside;
@@ -78,7 +96,9 @@ $primaryTextLight: #389428;
         position: relative;
         max-width: min-content;
         white-space: nowrap;
-        @media (max-width: 999px) {
+        align-items: center;
+        transition: .3s;
+        @media (max-width: 991px) {
           white-space: normal;
           width: 100%;
           max-width: none;
@@ -86,49 +106,40 @@ $primaryTextLight: #389428;
         &:hover {
           color: $primaryText;
         }
-        &::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          transform: scaleX(0);
-          height: 3px;
-          bottom: 0;
-          top: 25px;
-          left: 0;
-          background-color: $primaryText;
-          transform-origin: bottom right;
-          transition: transform 0.25s ease-out;
-        }
-        
-        &:hover::after {
-          @media (min-width: 999px) {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-        }
       }
     }
   }
   
   .right {
-    overflow: hidden;
+    background-size: cover;
+    margin-left: auto;
     height: calc(100vh - 100px);
-    max-height: calc(100vh - 100px);
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    &.show {
-      opacity: 1;
+
+    width: calc(100vw - 700px);
+    @media (min-width: 1200px) and (max-width: 1919px) {
+      width: calc(100vw - 500px);
     }
-    z-index: 0;
-    @media (max-width: 999px) {
-      display: none;
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: calc(100vw - 400px);
     }
-    @media (max-width: 480px) {
-      display: block;
-      max-height: calc(100vh - 80px);
+
+    @media (max-width: 991px) {
       height: calc(100vh - 80px);
-      width: auto;
+      width: 100vw;
+      z-index: 0;
     }
+  }
+  #ProductsHeroImage {
+    background-image: url('/images/ProductsHero.png');
+  }
+  #InvestorsHeroImage {
+    background-image: url('/images/InvestorsHero.png');
+  }
+  #LogysticsHeroImage {
+    background-image: url('/images/LogisticsHero.png');
+  }
+  #QualityHeroImage {
+    background-image: url('/images/QualityHero.webp');
   }
 }
 
@@ -138,7 +149,7 @@ $primaryTextLight: #389428;
   gap: 30px;
   font-size: 20px;
 
-  @media (max-width: 999px) {
+  @media (max-width: 991px) {
     flex-direction: column;
     font-size: 16px;
   }
@@ -147,6 +158,7 @@ $primaryTextLight: #389428;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
     @media (max-width: 480px) {
       flex-direction: column;
     }
@@ -194,7 +206,7 @@ $primaryTextLight: #389428;
 
 .title {
   font-size: 50px;
-  @media (max-width: 999px) {
+  @media (max-width: 991px) {
     font-size: 40px;
   }
   @media (max-width: 500px) {

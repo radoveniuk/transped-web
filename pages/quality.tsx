@@ -48,7 +48,7 @@ export default function Quality () {
               </div>
             </div>
           </div>
-          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/QualityHero.webp" width={1028} height={751} alt="Image of elevators and flags" />
+          <div className={`${styles.right} fade-in`} id={styles.QualityHeroImage} />
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>

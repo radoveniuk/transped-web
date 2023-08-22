@@ -1,7 +1,6 @@
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
-import Image from 'next/image';
 import { AiFillFileText } from 'react-icons/ai';
 import { Trans, useTranslation } from 'next-i18next';
 
@@ -27,11 +26,10 @@ const DocLink = ({ children }: PropsWithChildren) => {
 
 export default function Investors () {
   const { t } = useTranslation('investors');
-  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   return (
     <>
       <Head>
-        <title>To investors | Transped s.r.o.</title>
+        <title>Investor relations | Transped s.r.o.</title>
         <meta name="description" content="Member of Grain Alliance" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -40,7 +38,7 @@ export default function Investors () {
         <section className={styles.hero}>
           <div className={styles.left}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in mt-24`} style={{ whiteSpace: 'nowrap' }}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in`}>
                 <Trans
                   t={t}
                   i18nKey="title"
@@ -50,13 +48,13 @@ export default function Investors () {
                 t={t}
                 i18nKey="cooperationDescription"
                 components={{
-                  root: <p/>,
+                  root: <p className={styles.sideInfo} />,
                   docLink: <DocLink />,
                 }}
               />
             </div>
           </div>
-          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/InvestorsHero.png" width={1028} height={751} alt="Image of elevators and flags" />
+          <div className={`${styles.right} fade-in`} id={styles.InvestorsHeroImage} />
         </section>
         <section className={`${styles.contacts} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('contactsTitle')}</h2>

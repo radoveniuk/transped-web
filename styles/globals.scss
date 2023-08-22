@@ -45,13 +45,14 @@ body {
   min-height: 100vh;
   background-color: #fff;
   color: #225A18;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 main {
   background-color: #fff;
   margin-top: 100px;
 }
-@media (max-width: 999px) {
+@media (max-width: 991px) {
   main {
     margin-top: 80px;
   }
@@ -88,7 +89,7 @@ a {
   @media (max-width: 1249px) {
     padding: 0 55px;
   }
-  @media (max-width: 999px) {
+  @media (max-width: 991px) {
     padding: 0 44px;
   }
   @media (max-width: 759px) {
@@ -121,7 +122,7 @@ section {
 }
 
 .dark {
-  background-color: #e8ffe4;
+  background-color: #ebf4e9;
   // color: #FFF8DF;
 }
 
@@ -340,7 +341,7 @@ section {
 
 @keyframes pointFade {
   0%,
-  19.999%,
+  19.991%,
   100% {
     opacity: 0;
   }
@@ -495,7 +496,7 @@ background-repeat: no-repeat;
 }
 
 .ca3-scroll-down-link {
-  @media (max-width: 480px) {
+  @media (max-width: 991px) {
     display:none;
   }
 cursor:pointer;

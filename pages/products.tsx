@@ -33,7 +33,6 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Products () {
   const { t } = useTranslation('products');
-  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(1);
   const [galleryHash, setGalleryHash] = useState('1');
@@ -47,24 +46,26 @@ export default function Products () {
       </Head>
       <main className={`${styles.content} ${DEFAULT_TEXT_FONT.className}`}>
         <section className={styles.hero}>
-          <div className={styles.left}>
+          <div className={`${styles.left} fade-in`}>
             <div className={styles.leftContent}>
-              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className} fade-in`}>
+              <h1 className={`${styles.title} ${PAGE_TITLE_FONT.className}`}>
                 <Trans
                   i18nKey="title"
                   t={t}
                 />
               </h1>
-              <Trans
-                t={t}
-                i18nKey="description"
-              />
-              <Link className="fade-in" href="/contacts">
+              <p className={styles.sideInfo}>
+                <Trans
+                  t={t}
+                  i18nKey="description"
+                />
+              </p>
+              <Link href="/contacts">
                 <Button>{t('contactsBtn')}</Button>
               </Link>
             </div>
           </div>
-          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} onLoad={() => { setHeroImageLoaded(true); }} src="/images/ProductsHero.png" width={945} height={531} alt="Grain" />
+          <div className={`${styles.right} fade-in`} id={styles.ProductsHeroImage} />
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('qualityProductTitle')}</h2>

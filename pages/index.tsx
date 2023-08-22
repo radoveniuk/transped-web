@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import classNames from 'classnames';
 import { AiFillFileText } from 'react-icons/ai';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -37,7 +37,6 @@ export async function getStaticProps({ locale }: {locale: string}) {
 
 export default function Home() {
   const { t } = useTranslation('home');
-  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
 
   const scrollDown = () => {
     const width = window.innerWidth;
@@ -64,7 +63,7 @@ export default function Home() {
               <p className={classNames(styles.description, pageDescriptionFont.className)} dangerouslySetInnerHTML={{ __html: t('title') }} />
             </div>
           </div>
-          <Image className={`${styles.right} ${heroImageLoaded && styles.show}`} src={'/images/HomeHero.png'} onLoad={() => { setHeroImageLoaded(true); }} width={956} height={751} alt={''} />
+          <div className={`${styles.right} fade-in`} />
           <a className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="" onClick={scrollDown} />
         </section>
         <section className={`${styles.holding} dark`}>
