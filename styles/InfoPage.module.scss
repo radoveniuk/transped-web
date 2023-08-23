@@ -113,7 +113,7 @@ $primaryTextLight: #6aa260;
   .right {
     background-size: cover;
     margin-left: auto;
-    height: calc(100vh - 100px);
+    height: 100%;
 
     width: calc(100vw - 700px);
     @media (min-width: 1200px) and (max-width: 1919px) {
