@@ -39,7 +39,7 @@ export default function Contacts () {
             <ContactCard dbName="Bartolomej Némethi"/>
             <ContactCard dbName="Vladyslav Nahynailo"/>
             <ContactCard dbName="Alexander Boda"/>
-            <ContactCard dbName="Tair Musayev"/>
+            <ContactCard dbName="Tahir Musayev"/>
           </div>
         </section>
         <section className={`dark ${styles.geoData}`}>
