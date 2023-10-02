@@ -5,6 +5,7 @@ import { Trans, useTranslation } from 'next-i18next';
 
 import Button from '@/uikit/Button';
 import ContactCard from '@/uikit/ContactCard';
+import ScrollDown from '@/uikit/ScrollDown';
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 
 import styles from '@/styles/InfoPage.module.scss';
@@ -49,6 +50,7 @@ export default function Logistics () {
             </div>
           </div>
           <div className={`${styles.right} fade-in`} id={styles.LogysticsHeroImage} />
+          <ScrollDown />
         </section>
         <section className={`dark ${styles.text}`}>
           <h2 className={`${styles.title} fade-in`}>{t('transportVariantsTitle')}</h2>

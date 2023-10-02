@@ -40,4 +40,12 @@
       font-size: 14px;
     }
   }
+  
+  .arrowUp {
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: #6aa260;
+    }
+  }
 }

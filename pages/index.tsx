@@ -7,6 +7,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Montserrat_Alternates, Montserrat } from 'next/font/google';
 
+import ScrollDown from '@/uikit/ScrollDown';
+
 import styles from '@/styles/Home.module.scss';
 
 const pageTitleFont = Montserrat_Alternates({
@@ -75,7 +77,7 @@ export default function Home() {
             </div>
           </div>
           <div className={`${styles.right} fade-in`} />
-          <a className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="" onClick={scrollDown} />
+          <ScrollDown />
         </section>
         <section className={`${styles.holding} dark`}>
           <div className={styles.left}>
@@ -140,7 +142,7 @@ export default function Home() {
             {t('certs')}<br/><br/>
             <ul className={styles.sertificates}>
               <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
-              <li><a href="/docs/TRANSPED GMP Certificate_D0D0FB96-BE9_en UNTIL 190925.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
+              <li><a href="/docs/Cert. GMP+ 2020 TR, ST 2023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
               <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soya&quot;</a></li>
               <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
             </ul>

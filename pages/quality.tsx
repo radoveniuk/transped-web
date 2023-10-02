@@ -7,6 +7,7 @@ import { Trans, useTranslation } from 'next-i18next';
 
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
 import ContactCard from '@/uikit/ContactCard';
+import ScrollDown from '@/uikit/ScrollDown';
 
 import styles from '@/styles/InfoPage.module.scss';
 
@@ -41,7 +42,7 @@ export default function Quality () {
                 <div className={styles.sideInfoTitle}>{t('certs')}:</div>
                 <ul className={styles.sideInfoList}>
                   <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
-                  <li><a href="/docs/TRANSPED GMP Certificate_D0D0FB96-BE9_en UNTIL 190925.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
+                  <li><a href="/docs/Cert. GMP+ 2020 TR, ST 2023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
                   <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soy&quot;</a></li>
                   <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
                 </ul>
@@ -49,6 +50,7 @@ export default function Quality () {
             </div>
           </div>
           <div className={`${styles.right} fade-in`} id={styles.QualityHeroImage} />
+          <ScrollDown />
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={styles.title}>{t('warrantiesTitle')}</h2>

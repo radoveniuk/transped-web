@@ -4,13 +4,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Trans, useTranslation } from 'next-i18next';
+import Lightbox from 'react-18-image-lightbox';
 
 import { DEFAULT_TEXT_FONT, PAGE_TITLE_FONT } from '@/constants/fonts';
-import ContactCard from '@/uikit/ContactCard/ContactCard';
-import Button from '@/uikit/Button/Button';
+import ContactCard from '@/uikit/ContactCard';
+import Button from '@/uikit/Button';
+import ScrollDown from '@/uikit/ScrollDown';
 
 import styles from '@/styles/InfoPage.module.scss';
-import Lightbox from 'react-18-image-lightbox';
 
 const images = [
   '/images/cultures-gallery/1.webp',
@@ -66,6 +67,7 @@ export default function Products () {
             </div>
           </div>
           <div className={`${styles.right} fade-in`} id={styles.ProductsHeroImage} />
+          <ScrollDown />
         </section>
         <section className={`${styles.text} dark`}>
           <h2 className={`${styles.title} fade-in`}>{t('qualityProductTitle')}</h2>
