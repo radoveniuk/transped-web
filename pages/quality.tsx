@@ -42,7 +42,7 @@ export default function Quality () {
                 <div className={styles.sideInfoTitle}>{t('certs')}:</div>
                 <ul className={styles.sideInfoList}>
                   <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
-                  <li><a href="/docs/Cert. GMP+ 2020 TR, ST 2023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
+                  <li><a href="/docs/GMP2023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>GMP+</a></li>
                   <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soy&quot;</a></li>
                   <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
                 </ul>
