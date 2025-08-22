@@ -18,7 +18,7 @@ export default function Footer() {
       <div className={styles.content}>
         <Image className={styles.logo} src="/images/Logo1.png" width={65} height={100} alt="Tranped s.r.o logo" />
         <div className={styles.rights}>
-          <div className="mb-12">Copyright © 2023 | Transped s.r.o.</div>
+          <div className="mb-12">Copyright © 2025 | Transped s.r.o.</div>
           <p>{t('gdpr')}</p>
         </div>
         <div role="button" className={styles.arrowUp} onClick={scrollUp}>
