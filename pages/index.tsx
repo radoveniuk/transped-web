@@ -100,7 +100,7 @@ export default function Home() {
         </section>
         <section className={styles.logistics}>
           <h2 className={classNames(styles.title, pageTitleFont.className, 'fade-in')}>{t('logisticsTitle')}</h2>
-          <iframe className={styles.video} width="1120" height="630" src="https://www.youtube.com/embed/A36OtGtN5D8" title="Логістика Transped s.r.o." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          <iframe className={styles.video} width="1120" height="630" src="https://www.youtube.com/embed/SveoYZP7Bec?si=IX4l4p3nn8nV7q4r" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </section>
         <section className={`${styles.aboutUs} dark`}>
           <h2 className={classNames(styles.title, pageTitleFont.className, 'fade-in')}>{t('aboutUsTitle')}</h2>
@@ -112,7 +112,7 @@ export default function Home() {
               />
             </div>
             <div className={styles.right}>
-              <iframe className={styles.video} width="560" height="315" src="https://www.youtube-nocookie.com/embed/perFwzk3ijo" title="the unique experience of the Baryshivska grain company Grain Alliance was discussed in Bratislava" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className={styles.video} width="560" height="315" src="https://www.youtube.com/embed/Ieugi8mgcOk?si=coTNxszyl7p7mxqL" title="the unique experience of the Baryshivska grain company Grain Alliance was discussed in Bratislava" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
           </div>
           <div className={classNames(styles.conclusion, textFont.className, 'fade-in')}>
@@ -141,9 +141,9 @@ export default function Home() {
           <div className={classNames(styles.description, textFont.className, 'fade-in')}>
             {t('certs')}<br/><br/>
             <ul className={styles.sertificates}>
-              <li><a href="/docs/TRANSPED EU-ISCC-Cert-PL214-41008272 UNTIL 301023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
-              <li><a href="/docs/GMP2023.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
-              <li><a href="/docs/TRANSPED Europe Soya_Certificate 2023 UNTIL 3112224.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soya&quot;</a></li>
+              <li><a href="/docs/2026/ISCC_EU_Certificate_Transped from 31 10 25 to 30 10 26.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>ISCC</a></li>
+              <li><a href="/docs/2026/TRANSPED Cert GMP+ FROM 291024 TO 190926.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>{t('GMP+')}</a></li>
+              <li><a href="/docs/2026/TRANSPED Europe Soya_Certificate 2025 UNTIL 311226.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>&quot;Europe Soya&quot;</a></li>
               <li><a href="/docs/TRANSPED SLOVAK UKSUP REGISTRATION UNTIL 070927.pdf" download target="_blank" rel="noreferer" className={styles.docLink}><AiFillFileText size={20}/>UKSUP</a></li>
             </ul>
             <br/>

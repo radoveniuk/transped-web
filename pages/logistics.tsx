@@ -68,7 +68,7 @@ export default function Logistics () {
               </div>
             </div>
           </div>
-          <a href="/docs/Certifikát vahy.pdf" download target="_blank" rel="noreferer">
+          <a href="/docs/2026/Certifikát vahy.zip" download target="_blank" rel="noreferer">
             <Button variant="outlined">{t('certs')}</Button>
           </a>
         </section>
